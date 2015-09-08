@@ -1,0 +1,11 @@
+.gradle
+.sass-cache
+*.iml
+*.ipr
+*.iws
+.idea
+build
+out
+target
+.classpath
+.project
