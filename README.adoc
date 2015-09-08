@@ -2,7 +2,7 @@
 :linkattrs:
 :project-owner: aalmiray
 :project-repo: kordamp
-:project-name: boostrapfx-core
+:project-name: bootstrapfx-core
 
 image:http://img.shields.io/badge/license-MIT-blue.svg["MIT Licensed", link="http://opensource.org/licenses/MIT"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
