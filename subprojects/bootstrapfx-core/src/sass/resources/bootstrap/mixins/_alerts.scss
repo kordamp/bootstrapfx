@@ -1,0 +1,14 @@
+// Alerts
+
+@mixin alert-variant($background, $border, $text-color) {
+  -fx-background-color: linear-gradient(to bottom, $background 0px, darken($background, 7.5%) 100%);
+  -fx-border-color: $border;
+  -fx-text-fill: $text-color;
+  -fx-fill: $text-color;
+
+  * {
+    -fx-background-color: transparent;
+    -fx-text-fill: $text-color;
+    -fx-fill: $text-color;
+  }
+}

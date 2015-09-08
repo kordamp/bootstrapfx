@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <TextFlow GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"
+              styleClass="alert, alert-success">
+        <Text text="Well done!" styleClass="strong"/>
+        <Text text=" You successfully read this important alert message."/>
+    </TextFlow>
+
+    <TextFlow GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS"
+              styleClass="alert, alert-info">
+        <Text text="Heads up!" styleClass="strong"/>
+        <Text text=" This alert needs your attention, but it's not super important."/>
+    </TextFlow>
+
+    <TextFlow GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.hgrow="ALWAYS"
+              styleClass="alert, alert-warning">
+        <Text text="Warning!" styleClass="strong"/>
+        <Text text=" Best check yo self, you're not looking too good."/>
+    </TextFlow>
+
+    <TextFlow GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.hgrow="ALWAYS"
+              styleClass="alert, alert-danger">
+        <Text text="Oh snap!" styleClass="strong"/>
+        <Text text=" Change a few things up and try submitting again."/>
+    </TextFlow>
+
+    <TextFlow GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.hgrow="ALWAYS"
+              styleClass="alert">
+        <Text text="Well..." styleClass="strong"/>
+        <Text text=" This is embarrassing. A plain message without color."/>
+    </TextFlow>
+</GridPane>

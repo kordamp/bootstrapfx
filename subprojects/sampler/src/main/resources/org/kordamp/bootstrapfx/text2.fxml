@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.fillWidth="true"/>
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.fillWidth="true"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="text-primary" styleClass="text-primary"/>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="text-success" styleClass="text-success"/>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="text-info" styleClass="text-info"/>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="text-warning" styleClass="text-warning"/>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="text-danger" styleClass="text-danger"/>
+
+    <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="bg-primary"/>
+    <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="bg-success"/>
+    <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="bg-info"/>
+    <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="bg-warning"/>
+    <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="4" styleClass="bg-danger"/>
+
+</GridPane>

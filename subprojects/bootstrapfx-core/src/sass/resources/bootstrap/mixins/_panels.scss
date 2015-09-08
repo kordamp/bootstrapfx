@@ -1,0 +1,38 @@
+// Panels
+
+@mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  -fx-border-color: $border;
+
+//  & > .panel-heading-container {
+//    -fx-text-fill: $heading-text-color;
+//    -fx-fill: $heading-text-color;
+//    -fx-background-color: linear-gradient(to bottom, $heading-bg-color 0px, darken($heading-bg-color, 7.5%) 100%);
+//    -fx-border-color: $heading-border;
+//  }
+
+  & > .panel-heading {
+    -fx-text-fill: $heading-text-color;
+    -fx-fill: $heading-text-color;
+    -fx-background-color: linear-gradient(to bottom, $heading-bg-color 0px, darken($heading-bg-color, 7.5%) 100%);
+    -fx-border-color: $heading-border;
+
+    * {
+      -fx-text-fill: $heading-text-color;
+      -fx-fill: $heading-text-color;
+    }
+
+    // + .panel-collapse > .panel-body {
+    //   border-top-color: $border;
+    // }
+    .badge {
+      -fx-text-fill: $heading-bg-color;
+      -fx-fill: $heading-bg-color;
+      -fx-background-color: $heading-text-color;
+    }
+  }
+  //& > .panel-footer {
+  //  + .panel-collapse > .panel-body {
+  //    -fx-border-bottom-color: $border;
+  //  }
+  //}
+}

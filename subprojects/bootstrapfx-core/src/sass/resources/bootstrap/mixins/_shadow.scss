@@ -1,0 +1,5 @@
+// Shadow
+
+@mixin box-shadow($offset-x, $offset-y, $radius, $spread, $color) {
+  -fx-effect: innershadow(gaussian, $color, $radius, $spread, $offset-x, $offset-y);
+}

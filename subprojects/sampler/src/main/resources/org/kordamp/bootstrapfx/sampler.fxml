@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TabPane?>
+<TabPane xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets top="10" left="10" bottom="10" right="10"/>
+    </padding>
+</TabPane>

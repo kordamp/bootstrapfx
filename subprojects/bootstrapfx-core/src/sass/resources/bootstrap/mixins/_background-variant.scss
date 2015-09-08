@@ -1,0 +1,12 @@
+// Contextual backgrounds
+
+// [converter] $parent hack
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    -fx-background-color: $color;
+  }
+  a#{$parent}:hover,
+  a#{$parent}:focused {
+    --fxbackground-color: darken($color, 10%);
+  }
+}

@@ -1,0 +1,75 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focused, :pressed,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+  -fx-text-fill: $color;
+  -fx-fill: $color;
+  -fx-background-color: $background;
+  -fx-border-color: $border;
+
+  &:focused,
+  &.focused {
+    -fx-text-fill: $color;
+    -fx-fill: $color;
+    -fx-background-color: darken($background, 10%);
+    -fx-border-color: darken($border, 25%);
+  }
+  &:hover {
+    -fx-text-fill: $color;
+    -fx-fill: $color;
+    -fx-background-color: darken($background, 10%);
+    -fx-border-color: darken($border, 12%);
+  }
+  &:pressed,
+  &.pressed,
+  .open > &.dropdown-toggle {
+    -fx-text-fill: $color;
+    -fx-fill: $color;
+    -fx-background-color: darken($background, 10%);
+    -fx-border-color: darken($border, 12%);
+
+    &:hover,
+    &:focused,
+    &.focused {
+      -fx-text-fill: $color;
+      -fx-fill: $color;
+      -fx-background-color: darken($background, 17%);
+      -fx-border-color: darken($border, 25%);
+    }
+  }
+  &:pressed,
+  &.pressed,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focused,
+    &.focused,
+    &:pressed,
+    &.pressed {
+      -fx-background-color: $background;
+      -fx-border-color: $border;
+    }
+  }
+
+  .badge {
+    -fx-text-fill: $background;
+    -fx-fill: $background;
+    -fx-background-color: $color;
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  -fx-padding: $padding-vertical $padding-horizontal $padding-vertical $padding-horizontal;
+  -fx-font-size: $font-size;
+  //line-height: $line-height;
+  -fx-border-radius: $border-radius;
+  -fx-background-radius: $border-radius;
+}

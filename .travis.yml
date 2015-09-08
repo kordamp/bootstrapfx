@@ -1,0 +1,14 @@
+language: java
+before_install:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sudo apt-get update -qq
+  - sudo apt-get install oracle-java8-installer
+before_script:
+  - ./gradlew --version
+script: ./gradlew clean build 
+jdk: oraclejdk8
+env: TERM=dumb
+# after_success:
+#   - ./gradlew coveralls
+#   - bash <(curl -s https://codecov.io/bash)

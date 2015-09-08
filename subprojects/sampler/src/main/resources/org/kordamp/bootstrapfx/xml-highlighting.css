@@ -1,0 +1,23 @@
+.code-area {
+    -fx-font-weight: bold;
+}
+
+.tagmark {
+    -fx-fill: black;
+}
+
+.anytag {
+    -fx-fill: darkblue;
+}
+
+.attribute {
+    -fx-fill: blue;
+}
+
+.avalue {
+    -fx-fill: darkgreen;
+}
+
+.comment {
+    -fx-fill: lightgrey;
+}

@@ -1,0 +1,72 @@
+//
+// Badges
+// --------------------------------------------------
+
+
+// Base class
+.badge {
+  // display: inline-block;
+  -fx-min-width: 10px;
+  -fx-padding: 3px 7px 3px 7px;
+  -fx-font-size: $font-size-small;
+  -fx-font-weight: $badge-font-weight;
+  -fx-text-fill: $badge-color;
+  -fx-fill: $badge-color;
+  // line-height: $badge-line-height;
+  -fx-alignment: center;
+  // white-space: nowrap;
+  -fx-text-alignment: center;
+  -fx-background-color: $badge-bg;
+  -fx-border-radius: $badge-border-radius;
+  -fx-background-radius: $badge-border-radius;
+
+  // Empty badges collapse automatically (not available in IE8)
+  // &:empty {
+  //   display: none;
+  // }
+
+  // Quick fix for badges in buttons
+  // .btn & {
+  //   position: relative;
+  //   top: -1px;
+  // }
+
+  .btn-xs &,
+  .btn-group-xs > .btn & {
+    // top: 0;
+    -fx-padding: 1px 5px 1px 5px;
+  }
+
+  // [converter] extracted a& to a.badge
+
+  // Account for badges in navs
+  .list-group-item.active > &,
+  .nav-pills > .active > a > & {
+    -fx-text-fill: $badge-active-color;
+    -fx-fill: $badge-active-color;
+    -fx-background-color: $badge-active-bg;
+  }
+
+  // .list-group-item > & {
+  //   float: right;
+  // }
+
+//  .list-group-item > & + & {
+//    margin-right: 5px;
+//  }
+//
+//  .nav-pills > li > a > & {
+//    margin-left: 3px;
+//  }
+}
+
+// Hover state, but only for links
+a.badge {
+  &:hover,
+  &:focused {
+    -fx-text-fill: $badge-link-hover-color;
+    -fx-fill: $badge-link-hover-color;
+    // text-decoration: none;
+    -fx-cursor: default;
+  }
+}

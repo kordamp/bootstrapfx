@@ -1,0 +1,7 @@
+.page {
+    -fx-background-color: white;
+    -fx-border-color: darkgrey;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: .5em;
+}

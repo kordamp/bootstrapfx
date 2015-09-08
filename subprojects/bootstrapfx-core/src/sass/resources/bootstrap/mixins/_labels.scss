@@ -1,0 +1,12 @@
+// Labels
+
+@mixin label-variant($color) {
+  -fx-background-color: $color;
+
+  &[href] {
+    &:hover,
+    &:focused {
+      -fx-background-color: darken($color, 10%);
+    }
+  }
+}

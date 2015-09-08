@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="lbl h1"/>
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="0" hgap="10" vgap="10" styleClass="h1">
+        <Label GridPane.columnIndex="0" styleClass="lbl, lbl-default" text="Default"/>
+        <Label GridPane.columnIndex="1" styleClass="lbl, lbl-primary" text="Primary"/>
+        <Label GridPane.columnIndex="2" styleClass="lbl, lbl-success" text="Success"/>
+        <Label GridPane.columnIndex="3" styleClass="lbl, lbl-info" text="Info"/>
+        <Label GridPane.columnIndex="4" styleClass="lbl, lbl-warning" text="Warning"/>
+        <Label GridPane.columnIndex="5" styleClass="lbl, lbl-danger" text="Danger"/>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="lbl h2"/>
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1" hgap="10" vgap="10" styleClass="h2">
+        <Label GridPane.columnIndex="0" styleClass="lbl, lbl-default" text="Default"/>
+        <Label GridPane.columnIndex="1" styleClass="lbl, lbl-primary" text="Primary"/>
+        <Label GridPane.columnIndex="2" styleClass="lbl, lbl-success" text="Success"/>
+        <Label GridPane.columnIndex="3" styleClass="lbl, lbl-info" text="Info"/>
+        <Label GridPane.columnIndex="4" styleClass="lbl, lbl-warning" text="Warning"/>
+        <Label GridPane.columnIndex="5" styleClass="lbl, lbl-danger" text="Danger"/>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="lbl h3"/>
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2" hgap="10" vgap="10" styleClass="h3">
+        <Label GridPane.columnIndex="0" styleClass="lbl, lbl-default" text="Default"/>
+        <Label GridPane.columnIndex="1" styleClass="lbl, lbl-primary" text="Primary"/>
+        <Label GridPane.columnIndex="2" styleClass="lbl, lbl-success" text="Success"/>
+        <Label GridPane.columnIndex="3" styleClass="lbl, lbl-info" text="Info"/>
+        <Label GridPane.columnIndex="4" styleClass="lbl, lbl-warning" text="Warning"/>
+        <Label GridPane.columnIndex="5" styleClass="lbl, lbl-danger" text="Danger"/>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="lbl h4"/>
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3" hgap="10" vgap="10" styleClass="h4">
+        <Label GridPane.columnIndex="0" styleClass="lbl, lbl-default" text="Default"/>
+        <Label GridPane.columnIndex="1" styleClass="lbl, lbl-primary" text="Primary"/>
+        <Label GridPane.columnIndex="2" styleClass="lbl, lbl-success" text="Success"/>
+        <Label GridPane.columnIndex="3" styleClass="lbl, lbl-info" text="Info"/>
+        <Label GridPane.columnIndex="4" styleClass="lbl, lbl-warning" text="Warning"/>
+        <Label GridPane.columnIndex="5" styleClass="lbl, lbl-danger" text="Danger"/>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="lbl h5"/>
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4" hgap="10" vgap="10" styleClass="h5">
+        <Label GridPane.columnIndex="0" styleClass="lbl, lbl-default" text="Default"/>
+        <Label GridPane.columnIndex="1" styleClass="lbl, lbl-primary" text="Primary"/>
+        <Label GridPane.columnIndex="2" styleClass="lbl, lbl-success" text="Success"/>
+        <Label GridPane.columnIndex="3" styleClass="lbl, lbl-info" text="Info"/>
+        <Label GridPane.columnIndex="4" styleClass="lbl, lbl-warning" text="Warning"/>
+        <Label GridPane.columnIndex="5" styleClass="lbl, lbl-danger" text="Danger"/>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="5" text="lbl h6"/>
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5" hgap="10" vgap="10" styleClass="h6">
+        <Label GridPane.columnIndex="0" styleClass="lbl, lbl-default" text="Default"/>
+        <Label GridPane.columnIndex="1" styleClass="lbl, lbl-primary" text="Primary"/>
+        <Label GridPane.columnIndex="2" styleClass="lbl, lbl-success" text="Success"/>
+        <Label GridPane.columnIndex="3" styleClass="lbl, lbl-info" text="Info"/>
+        <Label GridPane.columnIndex="4" styleClass="lbl, lbl-warning" text="Warning"/>
+        <Label GridPane.columnIndex="5" styleClass="lbl, lbl-danger" text="Danger"/>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="6" text="lbl p"/>
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6" hgap="10" vgap="10" styleClass="p">
+        <Label GridPane.columnIndex="0" styleClass="lbl, lbl-default" text="Default"/>
+        <Label GridPane.columnIndex="1" styleClass="lbl, lbl-primary" text="Primary"/>
+        <Label GridPane.columnIndex="2" styleClass="lbl, lbl-success" text="Success"/>
+        <Label GridPane.columnIndex="3" styleClass="lbl, lbl-info" text="Info"/>
+        <Label GridPane.columnIndex="4" styleClass="lbl, lbl-warning" text="Warning"/>
+        <Label GridPane.columnIndex="5" styleClass="lbl, lbl-danger" text="Danger"/>
+    </GridPane>
+</GridPane>

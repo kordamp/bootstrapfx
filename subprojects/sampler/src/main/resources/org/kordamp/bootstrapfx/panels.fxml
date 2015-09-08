@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import org.kordamp.bootstrapfx.scene.layout.Panel?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <Panel GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"
+           styleClass="panel-default">
+        <heading>
+            <Label styleClass="h3" text="Panel title"/>
+        </heading>
+        <body>
+            <Label text="Panel body"/>
+        </body>
+    </Panel>
+
+    <Panel GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"
+           styleClass="panel-success">
+        <heading>
+            <Label styleClass="h3" text="Panel title"/>
+        </heading>
+        <body>
+            <Label text="Panel body"/>
+        </body>
+    </Panel>
+
+    <Panel GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"
+           styleClass="panel-warning">
+        <heading>
+            <Label styleClass="h3" text="Panel title"/>
+        </heading>
+        <body>
+            <Label text="Panel body"/>
+        </body>
+    </Panel>
+
+    <Panel GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS"
+           styleClass="panel-primary">
+        <heading>
+            <Label styleClass="h3" text="Panel title"/>
+        </heading>
+        <body>
+            <Label text="Panel body"/>
+        </body>
+    </Panel>
+
+    <Panel GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS"
+           styleClass="panel-info">
+        <heading>
+            <Label styleClass="h3" text="Panel title"/>
+        </heading>
+        <body>
+            <Label text="Panel body"/>
+        </body>
+    </Panel>
+
+    <Panel GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS"
+           styleClass="panel-danger">
+        <heading>
+            <Label styleClass="h3" text="Panel title"/>
+        </heading>
+        <body>
+            <Label text="Panel body"/>
+        </body>
+    </Panel>
+</GridPane>

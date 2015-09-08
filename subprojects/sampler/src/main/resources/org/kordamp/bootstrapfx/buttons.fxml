@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="btn btn-lg"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="btn, btn-lg, btn-default" text="Default"/>
+    <Button GridPane.columnIndex="2" GridPane.rowIndex="0" styleClass="btn, btn-lg, btn-primary" text="Primary"/>
+    <Button GridPane.columnIndex="3" GridPane.rowIndex="0" styleClass="btn, btn-lg, btn-success" text="Success"/>
+    <Button GridPane.columnIndex="4" GridPane.rowIndex="0" styleClass="btn, btn-lg, btn-info" text="Info"/>
+    <Button GridPane.columnIndex="5" GridPane.rowIndex="0" styleClass="btn, btn-lg, btn-warning" text="Warning"/>
+    <Button GridPane.columnIndex="6" GridPane.rowIndex="0" styleClass="btn, btn-lg, btn-danger" text="Danger"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="btn"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="btn, btn-default" text="Default"/>
+    <Button GridPane.columnIndex="2" GridPane.rowIndex="1" styleClass="btn, btn-primary" text="Primary"/>
+    <Button GridPane.columnIndex="3" GridPane.rowIndex="1" styleClass="btn, btn-success" text="Success"/>
+    <Button GridPane.columnIndex="4" GridPane.rowIndex="1" styleClass="btn, btn-info" text="Info"/>
+    <Button GridPane.columnIndex="5" GridPane.rowIndex="1" styleClass="btn, btn-warning" text="Warning"/>
+    <Button GridPane.columnIndex="6" GridPane.rowIndex="1" styleClass="btn, btn-danger" text="Danger"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="btn btn-sm"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="btn, btn-sm, btn-default" text="Default"/>
+    <Button GridPane.columnIndex="2" GridPane.rowIndex="2" styleClass="btn, btn-sm, btn-primary" text="Primary"/>
+    <Button GridPane.columnIndex="3" GridPane.rowIndex="2" styleClass="btn, btn-sm, btn-success" text="Success"/>
+    <Button GridPane.columnIndex="4" GridPane.rowIndex="2" styleClass="btn, btn-sm, btn-info" text="Info"/>
+    <Button GridPane.columnIndex="5" GridPane.rowIndex="2" styleClass="btn, btn-sm, btn-warning" text="Warning"/>
+    <Button GridPane.columnIndex="6" GridPane.rowIndex="2" styleClass="btn, btn-sm, btn-danger" text="Danger"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="btn btn-xs"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="btn, btn-xs, btn-default" text="Default"/>
+    <Button GridPane.columnIndex="2" GridPane.rowIndex="3" styleClass="btn, btn-xs, btn-primary" text="Primary"/>
+    <Button GridPane.columnIndex="3" GridPane.rowIndex="3" styleClass="btn, btn-xs, btn-success" text="Success"/>
+    <Button GridPane.columnIndex="4" GridPane.rowIndex="3" styleClass="btn, btn-xs, btn-info" text="Info"/>
+    <Button GridPane.columnIndex="5" GridPane.rowIndex="3" styleClass="btn, btn-xs, btn-warning" text="Warning"/>
+    <Button GridPane.columnIndex="6" GridPane.rowIndex="3" styleClass="btn, btn-xs, btn-danger" text="Danger"/>
+</GridPane>

@@ -1,0 +1,68 @@
+//
+// Labels
+// --------------------------------------------------
+
+.lbl {
+  // display: inline;
+  -fx-padding: .2em .6em .3em .6em;
+  -fx-font-size: 75%;
+  -fx-font-weight: bold;
+  // line-height: 1;
+  -fx-text-fill: $label-color;
+  -fx-fill: $label-color;
+  -fx-text-alignment: center;
+  // white-space: nowrap;
+  -fx-alignment: baseline-center;
+  -fx-border-radius: .25em;
+  -fx-background-radius: .25em;
+
+  // [converter] extracted a& to a.label
+
+  // Empty labels collapse automatically (not available in IE8)
+  //&:empty {
+  //  display: none;
+  //}
+
+  // Quick fix for labels in buttons
+  //.btn & {
+  //  position: relative;
+  //  top: -1px;
+  //}
+}
+
+// Add hover effects, but only for links
+//a.label {
+//  &:hover,
+//  &:focus {
+//    color: $label-link-hover-color;
+//    text-decoration: none;
+//    cursor: pointer;
+//  }
+//}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.lbl-default {
+  @include label-variant($label-default-bg);
+}
+
+.lbl-primary {
+  @include label-variant($label-primary-bg);
+}
+
+.lbl-success {
+  @include label-variant($label-success-bg);
+}
+
+.lbl-info {
+  @include label-variant($label-info-bg);
+}
+
+.lbl-warning {
+  @include label-variant($label-warning-bg);
+}
+
+.lbl-danger {
+  @include label-variant($label-danger-bg);
+}
