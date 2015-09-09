@@ -80,7 +80,7 @@ bintray {
         userOrg = project.project_bintray_org
         name = project.name
         desc = project.project_description
-        licenses = ['Apache-2.0']
+        licenses = ['MIT']
         labels = ['javafx','css','bootstrap']
         websiteUrl = project.project_url
         issueTrackerUrl = project.project_issues
