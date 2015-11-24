@@ -49,6 +49,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab("Panels", "panels.fxml"));
         tabPane.getTabs().add(new DemoTab("Headings", "text.fxml"));
         tabPane.getTabs().add(new DemoTab("Text ", "text2.fxml"));
+        tabPane.getTabs().add(new DemoTab("Paragraph ", "paragraph.fxml"));
 
         Scene scene = new Scene(tabPane);
         scene.getStylesheets().addAll(
@@ -58,7 +59,8 @@ public class Sampler extends Application {
 
         primaryStage.setTitle("BootstrapFX Sampler");
         primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
+        //primaryStage.sizeToScene();
+        primaryStage.setWidth(1024);
         primaryStage.show();
     }
 

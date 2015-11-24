@@ -110,6 +110,7 @@ $ gradle run
  * small
  * code, kbd, pre, samp
  * h1, h2, h3, h4, h5, h6
+ * lead
  * p
  * text-mute
  * text-primary, text-success, text-info, text-warning, text-danger

@@ -6,7 +6,6 @@
 // Headings
 // -------------------------
 
-h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   //-fx-font-family: $headings-font-family;
   //-fx-font-weight: $headings-font-weight;
@@ -23,9 +22,9 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
+.h1,
+.h2,
+.h3 {
   // margin-top: $line-height-computed;
   // margin-bottom: ($line-height-computed / 2);
 
@@ -34,9 +33,9 @@ h3, .h3 {
     -fx-font-size: 65%;
   }
 }
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+.h4,
+.h5,
+.h6 {
   // margin-top: ($line-height-computed / 2);
   // margin-bottom: ($line-height-computed / 2);
 
@@ -46,18 +45,18 @@ h6, .h6 {
   }
 }
 
-h1, .h1 { -fx-font-size: $font-size-h1; }
-h2, .h2 { -fx-font-size: $font-size-h2; }
-h3, .h3 { -fx-font-size: $font-size-h3; }
-h4, .h4 { -fx-font-size: $font-size-h4; }
-h5, .h5 { -fx-font-size: $font-size-h5; }
-h6, .h6 { -fx-font-size: $font-size-h6; }
+.h1 { -fx-font-size: $font-size-h1; }
+.h2 { -fx-font-size: $font-size-h2; }
+.h3 { -fx-font-size: $font-size-h3; }
+.h4 { -fx-font-size: $font-size-h4; }
+.h5 { -fx-font-size: $font-size-h5; }
+.h6 { -fx-font-size: $font-size-h6; }
 
 
 // Body text
 // -------------------------
 
-p {
+.p {
   // margin: 0 0 ($line-height-computed / 2);
 }
 
@@ -77,16 +76,16 @@ p {
 // -------------------------
 
 // Ex: (12px small font / 14px base font) * 100% = about 85%
-small,
 .small {
   -fx-font-size: floor((100% * $font-size-small / $font-size-base));
 }
 
-mark,
+/*
 .mark {
   -fx-background-color: $state-warning-bg;
   -fx-padding: .2em;
 }
+*/
 
 // Alignment
 .text-left           { -fx-text-alignment: left; }

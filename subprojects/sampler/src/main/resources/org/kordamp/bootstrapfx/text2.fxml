@@ -23,5 +23,4 @@
     <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="bg-info"/>
     <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="bg-warning"/>
     <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="4" styleClass="bg-danger"/>
-
 </GridPane>
