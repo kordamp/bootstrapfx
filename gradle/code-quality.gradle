@@ -45,7 +45,7 @@ license {
         fxml  = 'XML_STYLE'
 
     }
-    ext.year = '2015'
+    ext.year = '2015-2016'
     exclude '**/*.png'
     exclude '**/*.scss'
 }
