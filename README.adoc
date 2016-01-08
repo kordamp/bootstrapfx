@@ -77,11 +77,11 @@ You may used the included gradle wrapper script if you don't have `gradle` insta
  . Adjust your PATH environment variable to include $GRADLE_HOME/bin (%GRADLE_HOME%\bin on Windows).
  . Test your setup by invoking `gradle --version`.
 
-.GVM
+.SDKMAN
 
- . Follow the instructions found at http://gvmtool.net/ to install GVM.
+ . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once GVM is installed invoke `gvm install gradle 2.6`.
+ . Once SDKMAN is installed invoke `sdk install gradle 2.6`.
  . Test your setup by invoking `gradle --version`.
 
 .Gdub
