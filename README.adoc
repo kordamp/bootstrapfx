@@ -141,6 +141,13 @@ $ gradle run
  * alert
  * alert-success, alert-info, alert-warning, alert-danger
 
+== Groups
+
+ * btn-group-horizontal
+ * btn-group-vertical
+
+*NOTE:* all elements inside the vertical button group must have the same width.
+
 === Miscellaneous
 
  * badge
