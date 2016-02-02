@@ -39,6 +39,22 @@
       -fx-border-color: darken($border, 25%);
     }
   }
+  &:selected,
+  &.selected {
+    -fx-text-fill: $color;
+    -fx-fill: $color;
+    -fx-background-color: darken($background, 10%);
+    -fx-border-color: darken($border, 12%);
+
+    &:hover,
+    &:focused,
+    &.focused {
+      -fx-text-fill: $color;
+      -fx-fill: $color;
+      -fx-background-color: darken($background, 17%);
+      -fx-border-color: darken($border, 25%);
+    }
+  }
   &:pressed,
   &.pressed,
   .open > &.dropdown-toggle {
