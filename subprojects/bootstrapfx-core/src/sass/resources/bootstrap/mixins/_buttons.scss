@@ -89,3 +89,116 @@
   -fx-border-radius: $border-radius;
   -fx-background-radius: $border-radius;
 }
+
+@mixin split-menu-button-variant($color, $background, $border) {
+  // -fx-text-fill: $color;
+  // -fx-fill: $color;
+  // -fx-background-color: $background;
+  // -fx-border-color: $border;
+  & > .arrow {
+    -fx-text-fill: $color;
+    -fx-fill: $color;
+  }
+
+  & > .label,
+  & > .arrow-button {
+    -fx-text-fill: $color;
+    -fx-fill: $color;
+    -fx-background-color: $background;
+    -fx-border-color: $background;
+  }
+
+  &:focused,
+  &.focused {
+    & > .label,
+    & > .arrow-button {
+      -fx-text-fill: $color;
+      -fx-fill: $color;
+      -fx-background-color: darken($background, 10%);
+      -fx-border-color: darken($border, 25%);
+    }
+  }
+  &:hover {
+    & > .label,
+    & > .arrow-button {
+      -fx-text-fill: $color;
+      -fx-fill: $color;
+      -fx-background-color: darken($background, 10%);
+      -fx-border-color: darken($border, 12%);
+    }
+  }
+  &:pressed,
+  &.pressed,
+  .open > &.dropdown-toggle {
+    & > .label,
+    & > .arrow-button {
+      -fx-text-fill: $color;
+      -fx-fill: $color;
+      -fx-background-color: darken($background, 10%);
+      -fx-border-color: darken($border, 12%);
+    }
+
+    &:hover,
+    &:focused,
+    &.focused {
+      & > .label,
+      & > .arrow-button {
+        -fx-text-fill: $color;
+        -fx-fill: $color;
+        -fx-background-color: darken($background, 17%);
+        -fx-border-color: darken($border, 25%);
+      }
+    }
+  }
+  &:selected,
+  &.selected {
+    & > .label,
+    & > .arrow-button {
+      -fx-text-fill: $color;
+      -fx-fill: $color;
+      -fx-background-color: darken($background, 10%);
+      -fx-border-color: darken($border, 12%);
+    }
+
+    &:hover,
+    &:focused,
+    &.focused {
+      & > .label,
+      & > .arrow-button {
+        -fx-text-fill: $color;
+        -fx-fill: $color;
+        -fx-background-color: darken($background, 17%);
+        -fx-border-color: darken($border, 25%);
+      }
+    }
+  }
+  &:pressed,
+  &.pressed,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focused,
+    &.focused,
+    &:pressed,
+    &.pressed {
+      & > .label,
+      & > .arrow-button {
+        -fx-background-color: $background;
+        -fx-border-color: $border;
+      }
+    }
+  }
+}
+
+@mixin split-menu-button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  //-fx-padding: $padding-vertical $padding-horizontal $padding-vertical $padding-horizontal;
+  -fx-font-size: $font-size;
+  //line-height: $line-height;
+  -fx-border-radius: $border-radius;
+  -fx-background-radius: $border-radius;
+}

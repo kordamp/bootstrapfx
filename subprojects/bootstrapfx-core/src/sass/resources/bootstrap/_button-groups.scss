@@ -3,37 +3,38 @@
 // --------------------------------------------------
 //
 .btn-group-horizontal {
+  -fx-spacing: 0;
   > .first {
-    -fx-border-radius: 4 0 0 4;
-    -fx-background-radius: 4 0 0 4;
+    -fx-border-radius: $border-radius-base 0 0 $border-radius-base;
+    -fx-background-radius: $border-radius-base 0 0 $border-radius-base;
   }
   > .middle {
     -fx-border-radius: 0;
     -fx-background-radius: 0;
   }
   > .last {
-    -fx-border-radius: 0 4 4 0;
-    -fx-background-radius: 0 4 4 0;
+    -fx-border-radius: 0 $border-radius-base $border-radius-base 0;
+    -fx-background-radius: 0 $border-radius-base $border-radius-base 0;
   }
 }
 
 .btn-group-vertical {
+  -fx-spacing: 0;
   -fx-alignment: center;
   -fx-fill-width: true;
   > .first {
-    -fx-border-radius: 4 4 0 0;
-    -fx-background-radius: 4 4 0 0;
+    -fx-border-radius: $border-radius-base $border-radius-base 0 0;
+    -fx-background-radius: $border-radius-base $border-radius-base 0 0;
   }
   > .middle {
     -fx-border-radius: 0;
     -fx-background-radius: 0;
   }
   > .last {
-    -fx-border-radius: 0 0 4 4;
-    -fx-background-radius: 0 0 4 4;
+    -fx-border-radius: 0 0 $border-radius-base $border-radius-base;
+    -fx-background-radius: 0 0 $border-radius-base $border-radius-base;
   }
 }
-
 
 //// Make the div behave like a button
 //.btn-group,

@@ -24,7 +24,6 @@
 -->
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -34,18 +33,21 @@
         <Insets top="20" left="20" bottom="20" right="20"/>
     </padding>
 
-    <HBox styleClass="btn-group-horizontal" GridPane.columnIndex="0" GridPane.rowIndex="0">
-        <ToggleButton styleClass="btn, btn-primary, first" text="First"/>
-        <ToggleButton styleClass="btn, btn-success, middle" text="Middle"/>
-        <ToggleButton styleClass="btn, btn-info, middle" text="Middle"/>
-        <ToggleButton styleClass="btn, btn-warning, middle" text="Middle"/>
-        <ToggleButton styleClass="btn, btn-danger, last" text="Last"/>
-    </HBox>
-    <VBox styleClass="btn-group-vertical" GridPane.columnIndex="1" GridPane.rowIndex="0">
-        <Button styleClass="btn, btn-primary, first" text="First"/>
-        <Button styleClass="btn, btn-success, middle" text="Middle"/>
-        <Button styleClass="btn, btn-info, middle" text="Middle"/>
-        <Button styleClass="btn, btn-warning, middle" text="Middle"/>
-        <Button styleClass="btn, btn-danger, last" text="Last"/>
-    </VBox>
+    <GridPane hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <HBox styleClass="btn-group-horizontal" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <ToggleButton styleClass="btn, btn-primary, first" text="First"/>
+            <ToggleButton styleClass="btn, btn-success, middle" text="Middle"/>
+            <ToggleButton styleClass="btn, btn-info, middle" text="Middle"/>
+            <ToggleButton styleClass="btn, btn-warning, middle" text="Middle"/>
+            <ToggleButton styleClass="btn, btn-danger, last" text="Last"/>
+        </HBox>
+
+        <VBox styleClass="btn-group-vertical" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <ToggleButton styleClass="btn, btn-primary, first" text="First"/>
+            <ToggleButton styleClass="btn, btn-success, middle" text="Middle"/>
+            <ToggleButton styleClass="btn, btn-info, middle" text="Middle"/>
+            <ToggleButton styleClass="btn, btn-warning, middle" text="Middle"/>
+            <ToggleButton styleClass="btn, btn-danger, last" text="Last"/>
+        </VBox>
+    </GridPane>
 </GridPane>

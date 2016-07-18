@@ -51,6 +51,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab("Text ", "text2.fxml"));
         tabPane.getTabs().add(new DemoTab("Paragraph ", "paragraph.fxml"));
         tabPane.getTabs().add(new DemoTab("Button Groups ", "button_groups.fxml"));
+        tabPane.getTabs().add(new DemoTab("SplitMenuButtons", "split_menu_buttons.fxml"));
 
         Scene scene = new Scene(tabPane);
         scene.getStylesheets().addAll(

@@ -122,6 +122,12 @@ $ gradle run
  * btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger
  * btn-lg, btn-sm, btn-xs
 
+=== SplitMenu Buttons
+
+ * split-menu-btn
+ * split-menu-btn-default, split-menu-btn-primary, split-menu-btn-success, split-menu-btn-info, split-menu-btn-warning, split-menu-btn-danger
+ * split-menu-btn-lg, split-menu-btn-sm, split-menu-btn-xs
+
 === Labels
 
  * lbl
@@ -153,6 +159,12 @@ $ gradle run
  * badge
 
 == Changelog
+
+.0.2.0
+
+ * SplitMenu Button support
+ * Button group support
+ * `lead` on Text
 
 .0.1.0
 

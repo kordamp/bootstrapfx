@@ -1,0 +1,22 @@
+//
+// JavaFX specific
+// --------------------------------------------------
+
+.context-menu {
+    -fx-border-radius: $border-radius-base;
+    -fx-background-radius: $border-radius-base;
+}
+
+.context-menu > * {
+    -fx-padding: 5 0 5 0;
+}
+
+.tool-bar {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent $gray-lighter transparent;
+}
+
+.tool-bar:vertical {
+    -fx-border-color: transparent $gray-lighter transparent transparent;
+    -fx-background-insets: 0, 0 1 0 0;
+}
