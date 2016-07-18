@@ -158,6 +158,18 @@ $ gradle run
 
  * badge
 
+== Screenshots
+
+image::images/buttons.png[]
+
+image::images/labels.png[]
+
+image::images/alerts.png[]
+
+image::images/panels.png[]
+
+image::images/splitmenu-buttons.png[]
+
 == Changelog
 
 .0.2.0
