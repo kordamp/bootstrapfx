@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 buildscript {
     repositories {
         jcenter()
@@ -10,7 +12,19 @@ buildscript {
         classpath 'org.ajoberstar:gradle-git:1.3.2'
         classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.0'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
+        classpath 'net.nemerosa:versioning:2.4.0'
     }
+}
+
+apply plugin: 'net.nemerosa.versioning'
+
+Date buildTimeAndDate = new Date()
+ext {
+    buildBy = System.properties['user.name']
+    buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
+    buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
+    buildRevision = versioning.info.commit
+    buildCreatedBy = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
 }
 
 allprojects {

@@ -1,21 +1,14 @@
-import java.text.SimpleDateFormat
-
-Date buildTimeAndDate = new Date()
-ext {
-    buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
-    buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
-}
-
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 jar {
     manifest {
         attributes(
-            'Built-By': System.properties['user.name'],
-            'Created-By': System.properties['java.version'] + " (" + System.properties['java.vendor'] + " " + System.properties['java.vm.version'] + ")",
-            'Build-Date': project.buildDate,
-            'Build-Time': project.buildTime,
+            'Built-By': buildBy,
+            'Created-By': buildCreatedBy,
+            'Build-Date': buildDate,
+            'Build-Time': buildTime,
+            'Build-Revision': buildRevision,
             'Specification-Title': project.name,
             'Specification-Version': project.version,
             'Implementation-Title': project.name,
