@@ -21,6 +21,7 @@
  */
 package org.kordamp.bootstrapfx.scene.layout;
 
+import javafx.beans.DefaultProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Node;
@@ -30,6 +31,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 
+@DefaultProperty("body")
 public class Panel extends BorderPane {
     private ObjectProperty<Node> heading;
     private ObjectProperty<Node> body;
@@ -138,4 +140,6 @@ public class Panel extends BorderPane {
         }
         return null;
     }
+
+
 }
