@@ -4,5 +4,5 @@ mainClassName = 'org.kordamp.bootstrapfx.Sampler'
 
 dependencies {
     compile project(':bootstrapfx-core')
-    compile 'org.fxmisc.richtext:richtextfx:0.7-M2'
+    compile 'org.fxmisc.richtext:richtextfx:0.7-M3'
 }
