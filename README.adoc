@@ -1,11 +1,13 @@
 = BootstrapFX
 :linkattrs:
 :project-owner: aalmiray
-:project-repo: kordamp
-:project-name: bootstrapfx-core
+:project-repo:  kordamp
+:project-name:  bootstrapfx-core
+:project-group: org.kordamp.bootstrapfx
 
 image:http://img.shields.io/badge/license-MIT-blue.svg["MIT Licensed", link="http://opensource.org/licenses/MIT"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
+image:https://img.shields.io/maven-central/v/{project-group}/{project-name}.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"]
 
 ---
 
@@ -171,6 +173,10 @@ image::images/panels.png[]
 image::images/splitmenu-buttons.png[]
 
 == Changelog
+
+.0.2.1
+
+ * POM updates
 
 .0.2.0
 
