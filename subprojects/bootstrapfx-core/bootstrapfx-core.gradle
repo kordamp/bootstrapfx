@@ -23,7 +23,7 @@ task sourcesJar(type: Jar) {
 dependencies {
     // upgraded dependencies for compass-gradle
     jrubyExec 'org.bouncycastle:bcprov-jdk15on:1.56'
-    jrubyExec 'org.jruby:jruby-complete:9.1.6.0'
+    jrubyExec 'org.jruby:jruby-complete:9.1.8.0'
 }
 
 javadoc {
