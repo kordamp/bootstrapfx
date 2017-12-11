@@ -13,6 +13,7 @@ jar {
             'Specification-Version': project.version,
             'Implementation-Title': project.name,
             'Implementation-Version': project.version,
+            'Automatic-Module-Name': project.moduleName
         )
     }
     metaInf {

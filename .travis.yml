@@ -4,10 +4,19 @@ before_install:
   - sh -e /etc/init.d/xvfb start
   - sudo apt-get update -qq
   - sudo apt-get install oracle-java8-installer
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+cache:
+  directories:
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+  - $HOME/.sonar/cache/
 before_script:
   - ./gradlew --version
 script: ./gradlew clean build 
-jdk: oraclejdk8
+jdk:
+  - oraclejdk8
+  - oraclejdk9
 env: TERM=dumb
 # after_success:
 #   - ./gradlew coveralls
