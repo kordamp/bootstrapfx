@@ -176,6 +176,10 @@ image::images/splitmenu-buttons.png[]
 
 == Changelog
 
+.0.2.2
+
+ * Add `Automatic-Module-Name` to JAR manifest
+
 .0.2.1
 
  * POM updates
