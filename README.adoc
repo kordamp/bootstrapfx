@@ -154,7 +154,7 @@ $ ./gradlew :sampler:run
  * alert
  * alert-success, alert-info, alert-warning, alert-danger
 
-== Groups
+=== Groups
 
  * btn-group-horizontal
  * btn-group-vertical
