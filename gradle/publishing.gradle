@@ -93,6 +93,8 @@ publishing {
 
 if (!project.hasProperty('bintrayUsername')) ext.bintrayUsername = ''
 if (!project.hasProperty('bintrayApiKey')) ext.bintrayApiKey = ''
+if (!project.hasProperty('mavenUsername')) ext.mavenUsername = ''
+if (!project.hasProperty('mavenPassword')) ext.mavenPassword = ''
 
 bintray {
     user = project.bintrayUsername
@@ -109,5 +111,15 @@ bintray {
         issueTrackerUrl = project.project_issues
         vcsUrl = project.project_scm
         publicDownloadNumbers = true
+        githubRepo = 'aalmiray/bootstrapfx'
+        version {
+            name = project.version
+            vcsTag = "${project.name}-${project.version}"
+            mavenCentralSync {
+                sync = true
+                user = project.mavenUsername
+                password = project.mavenPassword
+            }
+        }
     }
 }
