@@ -169,6 +169,14 @@ $ ./gradlew :sampler:run
  * progress-bar-warning
  * progress-bar-danger
 
+=== Tooltips
+
+ * tooltip-primary
+ * tooltip-success
+ * tooltip-info
+ * tooltip-warning
+ * tooltip-danger
+
 === Miscellaneous
 
  * badge
@@ -190,6 +198,7 @@ image::images/splitmenu-buttons.png[]
 .0.2.3
 
  * Added `progress-bar` variants
+ * Added `tooltip` variants
  * Tweaked menu items and menus
 
 .0.2.2

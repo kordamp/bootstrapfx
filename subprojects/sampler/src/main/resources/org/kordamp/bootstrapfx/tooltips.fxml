@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2015-2018 Andres Almiray
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="tooltip-primary"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"
+            text="primary" styleClass="btn, btn-primary">
+        <tooltip>
+            <Tooltip styleClass="tooltip-primary" text="primary"/>
+        </tooltip>
+    </Button>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="tooltip-success"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS"
+            text="success" styleClass="btn, btn-success">
+        <tooltip>
+            <Tooltip styleClass="tooltip-success" text="success"/>
+        </tooltip>
+    </Button>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="tooltip-info"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.hgrow="ALWAYS"
+            text="info" styleClass="btn, btn-info">
+        <tooltip>
+            <Tooltip styleClass="tooltip-info" text="info"/>
+        </tooltip>
+    </Button>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="tooltip-warning"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.hgrow="ALWAYS"
+            text="warning" styleClass="btn, btn-warning">
+        <tooltip>
+            <Tooltip styleClass="tooltip-warning" text="warning"/>
+        </tooltip>
+    </Button>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="tooltip-danger"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.hgrow="ALWAYS"
+            text="danger" styleClass="btn, btn-danger">
+        <tooltip>
+            <Tooltip styleClass="tooltip-danger" text="danger"/>
+        </tooltip>
+    </Button>
+</GridPane>

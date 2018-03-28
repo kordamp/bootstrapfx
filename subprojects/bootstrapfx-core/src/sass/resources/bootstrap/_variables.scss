@@ -536,6 +536,11 @@ $tooltip-arrow-width:         5px !default;
 //** Tooltip arrow color
 $tooltip-arrow-color:         $tooltip-bg !default;
 
+$tooltip-border-color-primary: darken($brand-primary, 2%) !default;
+$tooltip-border-color-success: darken($brand-success, 2%) !default;
+$tooltip-border-color-info:    darken($brand-info, 2%) !default;
+$tooltip-border-color-warning: darken($brand-warning, 2%) !default;
+$tooltip-border-color-danger:  darken($brand-danger, 2%) !default;
 
 //== Popovers
 //

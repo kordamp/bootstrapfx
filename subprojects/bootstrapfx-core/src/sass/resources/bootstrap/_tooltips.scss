@@ -1,0 +1,26 @@
+//
+// Tooltips
+// --------------------------------------------------
+
+// Variations
+// -------------------------
+
+.tooltip-primary {
+  @include tooltip-variant($brand-primary, $tooltip-border-color-primary);
+}
+
+.tooltip-success {
+  @include tooltip-variant($brand-success, $tooltip-border-color-success);
+}
+
+.tooltip-info {
+  @include tooltip-variant($brand-info, $tooltip-border-color-info);
+}
+
+.tooltip-warning {
+  @include tooltip-variant($brand-warning, $tooltip-border-color-warning);
+}
+
+.tooltip-danger {
+  @include tooltip-variant($brand-danger, $tooltip-border-color-danger);
+}

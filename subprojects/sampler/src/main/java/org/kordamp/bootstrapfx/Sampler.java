@@ -49,6 +49,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab("Panels", "panels.fxml"));
         tabPane.getTabs().add(new DemoTab("Headings", "text.fxml"));
         tabPane.getTabs().add(new DemoTab("Progress Bars", "progressbars.fxml"));
+        tabPane.getTabs().add(new DemoTab("Tooltips ", "tooltips.fxml"));
         tabPane.getTabs().add(new DemoTab("Text ", "text2.fxml"));
         tabPane.getTabs().add(new DemoTab("Paragraph ", "paragraph.fxml"));
         tabPane.getTabs().add(new DemoTab("Button Groups ", "button_groups.fxml"));
