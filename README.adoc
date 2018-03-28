@@ -66,8 +66,8 @@ public class Sampler extends Application {
 
 You must meet the following requirements:
 
- * JDK8u40 as a minimum
- * Gradle 2.6
+ * JDK8u60 as a minimum
+ * Gradle 4.6
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
 
