@@ -2,15 +2,6 @@
 // JavaFX specific
 // --------------------------------------------------
 
-.context-menu {
-    -fx-border-radius: $border-radius-base;
-    -fx-background-radius: $border-radius-base;
-}
-
-.context-menu > * {
-    -fx-padding: 5 0 5 0;
-}
-
 .tool-bar {
     -fx-background-color: white;
     -fx-border-color: transparent transparent $gray-lighter transparent;
@@ -19,4 +10,41 @@
 .tool-bar:vertical {
     -fx-border-color: transparent $gray-lighter transparent transparent;
     -fx-background-insets: 0, 0 1 0 0;
+}
+
+.menu-item {
+    -fx-min-width: 200;
+}
+
+.menu-item:focused {
+    -fx-background-color: #f5f5f5;
+}
+
+.menu-item:focused > * {
+    -fx-text-fill: $gray-darker;
+}
+
+.menu-item:focused .arrow {
+    -fx-background-color: $btn-default-color;
+}
+
+.check-menu-item:checked:hover > .left-container > .check,
+.check-menu-item:checked:focused > .left-container > .check,
+.radio-menu-item:checked:hover > .left-container > .radio,
+.radio-menu-item:checked:focused > .left-container > .radio {
+    -fx-background-color: $btn-default-color;
+}
+
+.context-menu {
+  -fx-border-radius: $border-radius-base;
+  -fx-background-radius: $border-radius-base;
+    -fx-border-color: #bebec0;
+}
+
+.context-menu > * {
+    -fx-padding: 5 0 5 0;
+}
+
+.separator {
+    -fx-padding: 5 0 5 0;
 }
