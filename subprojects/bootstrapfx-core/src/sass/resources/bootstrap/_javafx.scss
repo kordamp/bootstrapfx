@@ -17,7 +17,7 @@
 }
 
 .menu-item:focused {
-    -fx-background-color: #f5f5f5;
+    -fx-background-color: $progress-bg;
 }
 
 .menu-item:focused > * {

@@ -161,6 +161,14 @@ $ ./gradlew :sampler:run
 
 *NOTE:* all elements inside the vertical button group must have the same width.
 
+=== Progress Bars
+
+ * progress-bar-primary
+ * progress-bar-success
+ * progress-bar-info
+ * progress-bar-warning
+ * progress-bar-danger
+
 === Miscellaneous
 
  * badge
@@ -178,6 +186,11 @@ image::images/panels.png[]
 image::images/splitmenu-buttons.png[]
 
 == Changelog
+
+.0.2.3
+
+ * Added `progress-bar` variants
+ * Tweaked menu items and menus
 
 .0.2.2
 

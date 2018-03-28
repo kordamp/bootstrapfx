@@ -1,10 +1,19 @@
 // Progress bars
 
 @mixin progress-bar-variant($color) {
-  background-color: $color;
+    & > .bar {
+        -fx-background-insets: 0;
+        -fx-background-color: $color;
+        -fx-progress-color: $color;
+        -fx-text-fill: $progress-bar-color;
+        -fx-text-alignment: center;
+        @include box-shadow(0, 0, -1px, 0, rgba(0, 0, 0, .15));
+    }
 
-  // Deprecated parent class requirement as of v3.2.0
-  .progress-striped & {
-    @include gradient-striped;
-  }
+    & > .track {
+        -fx-pref-height: 10;
+        -fx-background-radius: $progress-border-radius;
+        -fx-effect: innershadow(gaussian, $gray-lighter, 4, 0, 0, 1);
+        -fx-background-color: $progress-bg;
+    }
 }
