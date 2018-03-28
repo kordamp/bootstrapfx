@@ -43,9 +43,7 @@ public class Panel extends BorderPane {
 
     public Panel(String title) {
         this();
-        Label label = new Label(title);
-        label.getStyleClass().add("panel-title");
-        setHeading(label);
+        setText(title);
     }
 
     public final ObjectProperty<Node> headingProperty() {
@@ -130,7 +128,9 @@ public class Panel extends BorderPane {
     }
 
     public void setText(String text) {
-        headingProperty().set(new Label(text));
+        Label label = new Label(text);
+        label.getStyleClass().add("panel-title");
+        headingProperty().set(label);
     }
 
     public String getText() {
@@ -140,6 +140,4 @@ public class Panel extends BorderPane {
         }
         return null;
     }
-
-
 }

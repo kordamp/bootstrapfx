@@ -97,12 +97,15 @@ to use the gradle wrapper if available or your global gradle command. This is an
 
 === Next Steps
 
- . Make a full build issuing `gradle build`.
- . Run the sampler application by invoking the following commands
+ . Make a full build by invoking the following command
 [source]
 ----
-$ cd subprojects/sampler
-$ gradle run
+$ ./gradlew build
+----
+ . Run the sampler application by invoking the following command
+[source]
+----
+$ ./gradlew :sampler:run
 ----
 
 == Supported CSS Classes
