@@ -45,37 +45,6 @@ jar {
     }
 }
 
-def pomConfig = {
-    packaging 'jar'
-    name project.name
-    description project.project_description
-    url project.project_url
-    inceptionYear '2015'
-    licenses {
-        license([:]) {
-            name 'MIT License'
-            url 'http://opensource.org/licenses/MIT'
-            distribution 'repo'
-        }
-    }
-    scm {
-        url project.project_scm
-    }
-    developers {
-        [
-            aalmiray : 'Andres Almiray'
-        ].each { devId, devName ->
-            developer {
-                id devId
-                name devName
-                roles {
-                    role 'Developer'
-                }
-            }
-        }
-    }
-}
-
 publishing {
     publications {
         mavenCustom(MavenPublication) {
@@ -83,9 +52,33 @@ publishing {
             artifact sourcesJar
             artifact javadocJar
 
-            pom.withXml {
-                asNode().children().last() + pomConfig
-                asNode().appendNode('description', project.project_description)
+            pom {
+                name = project.name
+                description = project.project_description
+                url = project.project_url
+                packaging = 'jar'
+                inceptionYear = '2015'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'http://opensource.org/licenses/MIT'
+                        distribution = 'repo'
+                    }
+                }
+                scm {
+                    url = project.project_scm
+                }
+                developers {
+                    [
+                        aalmiray : 'Andres Almiray'
+                    ].each { devId, devName ->
+                        developer {
+                            id = devId
+                            name = devName
+                            roles = ['Developer']
+                        }
+                    }
+                }
             }
         }
     }

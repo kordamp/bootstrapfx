@@ -26,5 +26,5 @@ mainClassName = 'org.kordamp.bootstrapfx.Sampler'
 
 dependencies {
     compile project(':bootstrapfx-core')
-    compile 'org.fxmisc.richtext:richtextfx:0.8.2'
+    compile 'org.fxmisc.richtext:richtextfx:0.9.1'
 }

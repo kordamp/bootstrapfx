@@ -27,7 +27,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'gradle.plugin.com.github.jengelman.gradle.plugins:gradle-processes:0.4.1'
+        classpath 'gradle.plugin.com.github.jengelman.gradle.plugins:gradle-processes:0.5.0'
         classpath 'com.github.robfletcher:compass-gradle-plugin:2.0.6'
     }
 }
@@ -48,7 +48,7 @@ task sourcesJar(type: Jar) {
 dependencies {
     // upgraded dependencies for compass-gradle
     jrubyExec 'org.bouncycastle:bcprov-jdk15on:1.59'
-    jrubyExec 'org.jruby:jruby-complete:9.1.16.0'
+    jrubyExec 'org.jruby:jruby-complete:9.2.0.0'
 }
 
 javadoc {

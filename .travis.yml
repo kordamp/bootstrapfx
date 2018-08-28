@@ -16,7 +16,6 @@ before_script:
 script: ./gradlew clean build 
 jdk:
   - oraclejdk8
-#  - oraclejdk9
 env: TERM=dumb
 # after_success:
 #   - ./gradlew coveralls
