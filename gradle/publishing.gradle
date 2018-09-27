@@ -26,11 +26,12 @@ apply plugin: 'com.jfrog.bintray'
 jar {
     manifest {
         attributes(
-            'Built-By': buildBy,
             'Created-By': buildCreatedBy,
-            'Build-Date': buildDate,
-            'Build-Time': buildTime,
-            'Build-Revision': buildRevision,
+            'x-Built-By': buildBy,
+            'x-Build-Jdk': buildJdk,
+            'x-Build-Date': buildDate,
+            'x-Build-Time': buildTime,
+            'x-Build-Revision': buildRevision,
             'Specification-Title': project.name,
             'Specification-Version': project.version,
             'Implementation-Title': project.name,

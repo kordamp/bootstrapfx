@@ -34,20 +34,12 @@ buildscript {
 
 apply plugin: 'com.github.johnrengelman.processes'
 apply plugin: 'com.github.robfletcher.compass'
-apply from: rootProject.file('gradle/publishing.gradle')
 
 ext.sassSources = file('src/sass/resources')
 
-task sourcesJar(type: Jar) {
-    group 'Build'
-    description 'An archive of the source code'
-    classifier 'sources'
-    from sourceSets.main.allSource
-}
-
 dependencies {
     // upgraded dependencies for compass-gradle
-    jrubyExec 'org.bouncycastle:bcprov-jdk15on:1.59'
+    jrubyExec 'org.bouncycastle:bcprov-jdk15on:1.60'
     jrubyExec 'org.jruby:jruby-complete:9.2.0.0'
 }
 
@@ -65,7 +57,15 @@ javadoc {
                            'http://docs.oracle.com/javase/8/javafx/api/']
 }
 
+task sourcesJar(type: Jar) {
+    group 'Build'
+    description 'An archive of the source code'
+    classifier 'sources'
+    from sourceSets.main.allSource
+}
+
 task javadocJar(type: Jar) {
+    dependsOn 'javadoc'
     group 'Build'
     description 'An archive of the javadoc'
     classifier 'javadoc'
@@ -79,6 +79,8 @@ artifacts {
     sourcesJar
     javadocJar
 }
+
+apply from: rootProject.file('gradle/publishing.gradle')
 
 sourceSets {
     sass {

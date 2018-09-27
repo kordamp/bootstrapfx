@@ -29,15 +29,11 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
         classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath 'org.ajoberstar:gradle-git:1.7.2'
         classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.2'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
         classpath 'net.nemerosa:versioning:2.7.1'
-        classpath 'org.kordamp.gradle:jdeps-gradle-plugin:0.3.0'
-        classpath 'gradle.plugin.net.ossindex:ossindex-gradle-plugin:0.1.1'
     }
 }
 
@@ -49,15 +45,14 @@ ext {
     buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
     buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
     buildRevision = versioning.info.commit
-    buildCreatedBy = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
+    buildJdk = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
+    buildCreatedBy = "Gradle ${gradle.gradleVersion}"
 }
 
 allprojects {
     apply plugin: 'base'
     apply plugin: 'idea'
     apply plugin: 'com.github.ben-manes.versions'
-    apply plugin: 'net.ossindex.audit'
-    apply plugin: 'org.kordamp.jdeps'
 
     repositories {
         jcenter()
@@ -67,14 +62,6 @@ allprojects {
         tasks.withType(Javadoc) {
             options.addStringOption('Xdoclint:none', '-quiet')
         }
-    }
-
-    audit {
-        failOnError = false
-    }
-
-    jdeps {
-        failOnError = false
     }
 
     dependencyUpdates.resolutionStrategy = {
@@ -93,18 +80,11 @@ allprojects {
 
 subprojects { subproj ->
     apply plugin: 'java'
-    apply plugin: 'com.github.kt3k.coveralls'
     apply plugin: 'org.kordamp.gradle.stats'
-    apply from: rootProject.file('gradle/code-coverage.gradle')
     apply from: rootProject.file('gradle/code-quality.gradle')
     apply from: rootProject.file('gradle/javafx.gradle')
 
     subproj.tasks.withType(JavaCompile) {
-        sourceCompatibility = subproj.sourceCompatibility
-        targetCompatibility = subproj.targetCompatibility
-    }
-
-    subproj.tasks.withType(GroovyCompile) {
         sourceCompatibility = subproj.sourceCompatibility
         targetCompatibility = subproj.targetCompatibility
     }
