@@ -1,9 +1,10 @@
 = BootstrapFX
 :linkattrs:
-:project-owner: aalmiray
-:project-repo:  kordamp
-:project-name:  bootstrapfx-core
-:project-group: org.kordamp.bootstrapfx
+:project-owner:   aalmiray
+:project-repo:    kordamp
+:project-name:    bootstrapfx-core
+:project-group:   org.kordamp.bootstrapfx
+:project-version: 0.2.4
 
 image:http://img.shields.io/travis/aalmiray/bootstrapfx/master.svg["Build Status (travis)", link="https://travis-ci.org/aalmiray/bootstrapfx"]
 image:http://img.shields.io/badge/license-MIT-blue.svg["MIT Licensed", link="http://opensource.org/licenses/MIT"]
@@ -21,7 +22,42 @@ provides new widgets, behavior and a grid system. Some of these features may be 
 
 == Installing
 
-You can get the latest version of **BootstrapFX** directly from link:https://bintray.com[Bintray's JCenter] repository.
+You can get the latest version of **BootstrapFX** directly from link:https://bintray.com[Bintray's JCenter] repository or Maven Central.
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile '{project-group}:bootstrapfx-core:{project-version}'
+}
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependencies>
+    <dependency>
+        <groupId>{project-group}</groupId>
+        <artifactId>bootstrapfx-core</artifactId>
+        <version>{project-version}</version>
+    </dependency>
+</dependencies>
+
+<repositories>
+    <repository>
+        <id>central</id>
+        <name>jcenter</name>
+        <url>http://jcenter.bintray.com</url>
+    </repository>
+</repositories>
+----
+
 Once the `bootstrapfx-core` dependency is in your classpath you just need to apply the `boostrapfx.css` stylesheet to
 an scene, for example
 
@@ -38,18 +74,18 @@ import org.kordamp.bootstrapfx.scene.layout.Panel;
 
 public class Sampler extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {  //<1>
+    public void start(Stage primaryStage) throws Exception {                   //<1>
         Panel panel = new Panel("This is the title");
-        panel.getStyleClass().add("panel-primary");           //<2>
+        panel.getStyleClass().add("panel-primary");                            //<2>
         BorderPane content = new BorderPane();
         content.setPadding(new Insets(20));
         Button button = new Button("Hello BootstrapFX");
-        button.getStyleClass().setAll("btn","btn-danger");    //<2>
+        button.getStyleClass().setAll("btn","btn-danger");                     //<2>
         content.setCenter(button);
         panel.setBody(content);
 
         Scene scene = new Scene(panel);
-        scene.getStylesheets().add("bootstrapfx.css");        //<3>
+        scene.getStylesheets().add("org/kordamp/bootstrapfx/bootstrapfx.css"); //<3>
 
         primaryStage.setTitle("BootstrapFX");
         primaryStage.setScene(scene);
@@ -62,12 +98,16 @@ public class Sampler extends Application {
 <2> Apply CSS class to widgets
 <3> Apply BootstrapFX stylesheet to scene
 
+=== Java 9+
+
+BootstrapFX can be used in a modular fashion when running in Java9+. It's module name is `org.kordamp.bootstrapfx.core`.
+
 == Building
 
 You must meet the following requirements:
 
  * JDK8u60 as a minimum
- * Gradle 4.6
+ * Gradle 4.10
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
 
@@ -85,7 +125,7 @@ You may used the included gradle wrapper script if you don't have `gradle` insta
 
  . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once SDKMAN is installed invoke `sdk install gradle 2.6`.
+ . Once SDKMAN is installed invoke `sdk install gradle 4.10`.
  . Test your setup by invoking `gradle --version`.
 
 .Gdub
@@ -194,6 +234,10 @@ image::images/panels.png[]
 image::images/splitmenu-buttons.png[]
 
 == Changelog
+
+.0.2.4
+
+ * The `bootstrapfx.css` file has been moved to `org/kordamp/bootstrapfx/bootstrapfx.css`.
 
 .0.2.3
 

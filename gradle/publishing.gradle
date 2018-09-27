@@ -23,7 +23,43 @@
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
+task generateMinPom {
+    doLast {
+        String pomHeader = """<?xml version="1.0" encoding="UTF-8"?>
+            <project xmlns="http://maven.apache.org/POM/4.0.0"
+                     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <modelVersion>4.0.0</modelVersion>
+                <groupId>${project.group}</groupId>
+                <artifactId>${project.name}</artifactId>
+                <version>${project.version}</version>
+        """.stripIndent(12)
+
+        def dependencyTemplate = { dep -> """
+            <dependency>
+                <groupId>$dep.group</groupId>
+                <artifactId>$dep.name</artifactId>
+                <version>$dep.version</version>
+            </dependency>
+        """.stripIndent(4)
+        }
+
+        String deps = configurations.runtime.allDependencies.findAll({it.name!= 'unspecified'})
+            .collect({ dep -> dependencyTemplate(dep)}).join('')
+
+        String pom = pomHeader
+        if (deps) {
+            pom += "    <dependencies>\n$deps\n    </dependencies>\n"
+        }
+        pom += "</project>"
+
+        project.file("$buildDir/tmp/maven").mkdirs()
+        project.file("$buildDir/tmp/maven/pom.xml").text = pom
+    }
+}
+
 jar {
+    dependsOn 'generateMinPom'
     manifest {
         attributes(
             'Created-By': buildCreatedBy,
@@ -42,6 +78,18 @@ jar {
     metaInf {
         from(rootProject.files('.')) {
             include 'LICENSE*'
+        }
+        from(rootProject.file('src/maven')) {
+            into "maven/${project.group}/${project.name}"
+            expand(
+                'gradle_version': gradle.gradleVersion,
+                'project_version': project.version,
+                'project_group': project.group,
+                'project_name': project.name,
+            )
+        }
+        from(file("$buildDir/tmp/maven")) {
+            into "maven/${project.group}/${project.name}"
         }
     }
 }
