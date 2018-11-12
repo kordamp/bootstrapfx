@@ -85,7 +85,6 @@ allprojects {
 subprojects { subproj ->
     apply plugin: 'java'
     apply plugin: 'org.kordamp.gradle.stats'
-    apply plugin: 'com.sandec.jpro'
     apply from: rootProject.file('gradle/code-quality.gradle')
     apply from: rootProject.file('gradle/javafx.gradle')
 

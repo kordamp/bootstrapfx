@@ -21,6 +21,7 @@
  */
 
 apply plugin: 'application'
+apply plugin: 'com.sandec.jpro'
 
 mainClassName = 'org.kordamp.bootstrapfx.Sampler'
 
