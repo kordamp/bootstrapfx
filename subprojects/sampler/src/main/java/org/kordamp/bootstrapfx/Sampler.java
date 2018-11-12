@@ -28,10 +28,13 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
 import java.nio.file.Paths;
+import org.apache.commons.io.IOUtils;
 
 import static java.nio.file.Files.lines;
 import static java.util.stream.Collectors.joining;
@@ -55,7 +58,15 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab("Button Groups ", "button_groups.fxml"));
         tabPane.getTabs().add(new DemoTab("SplitMenuButtons", "split_menu_buttons.fxml"));
 
-        Scene scene = new Scene(tabPane);
+        StackPane innerPane = new StackPane(tabPane);
+        innerPane.setMaxWidth(1000);
+        innerPane.setMaxHeight(600);
+        innerPane.setStyle("-fx-background-color: #ddd; -fx-background-radius: 10;");
+        StackPane outerPane = new StackPane(innerPane);
+        outerPane.setStyle("-fx-background-image: url('/org/kordamp/bootstrapfx/ambient-background.jpg');" +
+                "-fx-background-size: cover;");
+
+        Scene scene = new Scene(outerPane);
         scene.getStylesheets().addAll(
             "org/kordamp/bootstrapfx/bootstrapfx.css",
             "org/kordamp/bootstrapfx/sampler.css",
@@ -89,7 +100,7 @@ public class Sampler extends Application {
             XMLEditor editor = new XMLEditor();
             editor.setEditable(false);
 
-            String text = lines(Paths.get(getClass().getResource(sourceFile).toURI())).collect(joining("\n"));
+            String text = IOUtils.toString(getClass().getResourceAsStream(sourceFile));
             editor.setText(text);
             source.setContent(editor);
 
