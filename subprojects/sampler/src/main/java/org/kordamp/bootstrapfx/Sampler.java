@@ -31,7 +31,7 @@ public class Sampler extends Application {
 
         Scene scene = new Scene(new DemoTabPane());
         scene.getStylesheets().addAll(
-                "bootstrapfx.css",
+                "org/kordamp/bootstrapfx/bootstrapfx.css",
                 "org/kordamp/bootstrapfx/sampler.css",
                 "org/kordamp/bootstrapfx/xml-highlighting.css");
 
