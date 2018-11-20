@@ -149,7 +149,7 @@ $ ./gradlew build
 ----
 $ ./gradlew :sampler:run
 ----
- . Run the sampler application with JPro (https://www.jpro.one/) by invoking the following command
+ . Run the sampler application with link:https://www.jpro.one/[JPro] by invoking the following command
 [source]
 ----
 $ ./gradlew :sampler:run
