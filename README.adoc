@@ -149,6 +149,11 @@ $ ./gradlew build
 ----
 $ ./gradlew :sampler:run
 ----
+ . Run the sampler application with JPro (https://www.jpro.one/) by invoking the following command
+[source]
+----
+$ ./gradlew :sampler:run
+----
 
 == Supported CSS Classes
 

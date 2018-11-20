@@ -19,13 +19,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+package org.kordamp.bootstrapfx;
 
-apply plugin: 'application'
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
-mainClassName = 'org.kordamp.bootstrapfx.Sampler'
+public class SamplerJPro extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
 
-dependencies {
-    compile project(':bootstrapfx-core')
-    compile 'org.fxmisc.richtext:richtextfx:0.9.1'
-    compile group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
+        StackPane innerPane = new StackPane(new DemoTabPane());
+        innerPane.setMaxWidth(1000);
+        innerPane.setMaxHeight(600);
+        innerPane.setStyle("-fx-background-color: #ddd; -fx-background-radius: 10;");
+        StackPane outerPane = new StackPane(innerPane);
+        outerPane.setStyle("-fx-background-image: url('/org/kordamp/bootstrapfx/ambient-background.jpg');" +
+                "-fx-background-size: cover;");
+
+        Scene scene = new Scene(outerPane);
+        scene.getStylesheets().addAll(
+            "org/kordamp/bootstrapfx/bootstrapfx.css",
+            "org/kordamp/bootstrapfx/sampler.css",
+            "org/kordamp/bootstrapfx/xml-highlighting.css");
+
+        primaryStage.setTitle("BootstrapFX Sampler");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
 }
