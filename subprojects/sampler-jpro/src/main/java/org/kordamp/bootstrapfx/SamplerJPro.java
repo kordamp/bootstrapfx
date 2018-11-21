@@ -26,6 +26,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+/**
+ * @author Florian Kirmaier
+ */
 public class SamplerJPro extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
