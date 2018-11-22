@@ -26,6 +26,9 @@ buildscript {
     repositories {
         jcenter()
         maven { url 'https://plugins.gradle.org/m2/' }
+        maven {
+            url "https://sandec.bintray.com/repo"
+        }
     }
 
     dependencies {
@@ -34,6 +37,7 @@ buildscript {
         classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.2'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
         classpath 'net.nemerosa:versioning:2.7.1'
+        classpath "com.sandec.jpro:jpro-plugin-gradle:2018.1.8"
     }
 }
 

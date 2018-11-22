@@ -15,3 +15,4 @@ def includeProject = { String projectDirName, String projectName ->
 
 includeProject 'subprojects', 'bootstrapfx-core'
 includeProject 'subprojects', 'sampler'
+includeProject 'subprojects', 'sampler-jpro'

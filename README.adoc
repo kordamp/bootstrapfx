@@ -20,6 +20,8 @@ stylesheet that closely resembles the original while being custom tailored for J
 It's worth mentioning that Twitter Bootstrap delivers more than just a standardized look for common widgets. It also
 provides new widgets, behavior and a grid system. Some of these features may be ported at a later stage to BootstrapFX.
 
+There is an link:https://demos.jpro.one/bootstrapfx.html[online-version] available at link:https://www.jpro.one/[jpro.one].
+
 == Installing
 
 You can get the latest version of **BootstrapFX** directly from link:https://bintray.com[Bintray's JCenter] repository or Maven Central.
@@ -146,6 +148,11 @@ $ ./gradlew build
 [source]
 ----
 $ ./gradlew :sampler:run
+----
+ . Run the sampler application with link:https://www.jpro.one/[JPro] by invoking the following command
+[source]
+----
+$ ./gradlew :sampler-jpro:jproRun
 ----
 
 == Supported CSS Classes

@@ -23,24 +23,33 @@ package org.kordamp.bootstrapfx;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Sampler extends Application {
+/**
+ * @author Florian Kirmaier
+ */
+public class SamplerJPro extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Scene scene = new Scene(new DemoTabPane());
+        StackPane innerPane = new StackPane(new DemoTabPane());
+        innerPane.setMaxWidth(1000);
+        innerPane.setMaxHeight(600);
+        innerPane.setStyle("-fx-background-color: #ddd; -fx-background-radius: 10;");
+        StackPane outerPane = new StackPane(innerPane);
+        outerPane.setStyle("-fx-background-image: url('/org/kordamp/bootstrapfx/ambient-background.jpg');" +
+                "-fx-background-size: cover;");
+
+        Scene scene = new Scene(outerPane);
         scene.getStylesheets().addAll(
-                "org/kordamp/bootstrapfx/bootstrapfx.css",
-                "org/kordamp/bootstrapfx/sampler.css",
-                "org/kordamp/bootstrapfx/xml-highlighting.css");
+            "org/kordamp/bootstrapfx/bootstrapfx.css",
+            "org/kordamp/bootstrapfx/sampler.css",
+            "org/kordamp/bootstrapfx/xml-highlighting.css");
 
         primaryStage.setTitle("BootstrapFX Sampler");
         primaryStage.setScene(scene);
-        //primaryStage.sizeToScene();
-        primaryStage.setWidth(1024);
         primaryStage.show();
-
     }
 
 }
