@@ -20,7 +20,15 @@
  * THE SOFTWARE.
  */
 
-apply plugin: 'application'
+plugins {
+    id 'application'
+}
+
+config {
+    source     { enabled = false }
+    publishing { enabled = false }
+    bintray    { enabled = false }
+}
 
 mainClassName = 'org.kordamp.bootstrapfx.Sampler'
 

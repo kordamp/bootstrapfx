@@ -1,4 +1,6 @@
 /*
+ * SPDX-License-Identifier: MIT
+ *
  * Copyright (c) 2015-2018 Andres Almiray
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,53 +22,13 @@
  * THE SOFTWARE.
  */
 
-import java.text.SimpleDateFormat
-
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'https://plugins.gradle.org/m2/' }
-        maven {
-            url "https://sandec.bintray.com/repo"
-        }
-    }
-
-    dependencies {
-        classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.2'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
-        classpath 'net.nemerosa:versioning:2.7.1'
-        classpath "com.sandec.jpro:jpro-plugin-gradle:2018.1.8"
-    }
-}
-
-apply plugin: 'net.nemerosa.versioning'
-
-Date buildTimeAndDate = new Date()
-ext {
-    buildBy = System.properties['user.name']
-    buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
-    buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
-    buildRevision = versioning.info.commit
-    buildJdk = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
-    buildCreatedBy = "Gradle ${gradle.gradleVersion}"
+plugins {
+    id 'org.kordamp.gradle.kordamp-parentpom' version '1.2.1'
+    id 'org.kordamp.gradle.source-xref'       version '0.12.0' apply false
 }
 
 allprojects {
-    apply plugin: 'base'
     apply plugin: 'idea'
-    apply plugin: 'com.github.ben-manes.versions'
-
-    repositories {
-        jcenter()
-    }
-
-    if (JavaVersion.current().isJava8Compatible()) {
-        tasks.withType(Javadoc) {
-            options.addStringOption('Xdoclint:none', '-quiet')
-        }
-    }
 
     dependencyUpdates.resolutionStrategy = {
         componentSelection { rules ->
@@ -80,24 +42,48 @@ allprojects {
             }
         }
     }
+
+    license {
+        mapping {
+            fxml = 'XML_STYLE'
+        }
+        exclude '**/*.png'
+        exclude '**/*.jpg'
+        exclude '**/*.scss'
+    }
+}
+
+config {
+    info {
+        description   = 'BootstrapFX: CSS and widgets'
+        inceptionYear = '2015'
+        tags          = ['javafx','css','bootstrap']
+
+        specification { enabled = false }
+    }
+
+    license {
+        licenses {
+            license {
+                id      = 'MIT'
+                primary = true
+            }
+        }
+    }
+
+    javadoc {
+        options {
+            links('http://docs.oracle.com/javase/8/docs/api/',
+                  'http://docs.oracle.com/javase/8/javafx/api/')
+        }
+    }
 }
 
 subprojects { subproj ->
     apply plugin: 'java'
-    apply plugin: 'org.kordamp.gradle.stats'
-    apply from: rootProject.file('gradle/code-quality.gradle')
-    apply from: rootProject.file('gradle/javafx.gradle')
 
     subproj.tasks.withType(JavaCompile) {
         sourceCompatibility = subproj.sourceCompatibility
         targetCompatibility = subproj.targetCompatibility
-    }
-
-    repositories {
-        jcenter()
-    }
-
-    dependencies {
-        compileOnly project.files(project.jfxrtLocation)
     }
 }

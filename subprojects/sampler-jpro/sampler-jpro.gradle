@@ -20,8 +20,26 @@
  * THE SOFTWARE.
  */
 
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://sandec.bintray.com/repo' }
+    }
+
+    dependencies {
+        classpath "com.sandec.jpro:jpro-plugin-gradle:2018.1.9"
+    }
+}
+
 apply plugin: 'application'
 apply plugin: 'com.sandec.jpro'
+
+config {
+    source     { enabled = false }
+    publishing { enabled = false }
+    bintray    { enabled = false }
+}
 
 mainClassName = 'org.kordamp.bootstrapfx.SamplerJPro'
 
