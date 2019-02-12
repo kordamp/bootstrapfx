@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: MIT
  *
- * Copyright (c) 2015-2018 Andres Almiray
+ * Copyright (c) 2015-2019 Andres Almiray
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,34 +23,14 @@
  */
 
 plugins {
+    id 'com.gradle.build-scan'                version '2.1'
     id 'org.kordamp.gradle.kordamp-parentpom' version '1.2.1'
     id 'org.kordamp.gradle.source-xref'       version '0.12.0' apply false
 }
 
-allprojects {
-    apply plugin: 'idea'
-
-    dependencyUpdates.resolutionStrategy = {
-        componentSelection { rules ->
-            rules.all { selection ->
-                boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
-                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
-                }
-                if (rejected) {
-                    selection.reject('Release candidate')
-                }
-            }
-        }
-    }
-
-    license {
-        mapping {
-            fxml = 'XML_STYLE'
-        }
-        exclude '**/*.png'
-        exclude '**/*.jpg'
-        exclude '**/*.scss'
-    }
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
 }
 
 config {
@@ -76,6 +56,32 @@ config {
             links('http://docs.oracle.com/javase/8/docs/api/',
                   'http://docs.oracle.com/javase/8/javafx/api/')
         }
+    }
+}
+
+allprojects {
+    apply plugin: 'idea'
+
+    dependencyUpdates.resolutionStrategy = {
+        componentSelection { rules ->
+            rules.all { selection ->
+                boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
+                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+                }
+                if (rejected) {
+                    selection.reject('Release candidate')
+                }
+            }
+        }
+    }
+
+    license {
+        mapping {
+            fxml = 'XML_STYLE'
+        }
+        exclude '**/*.png'
+        exclude '**/*.jpg'
+        exclude '**/*.scss'
     }
 }
 

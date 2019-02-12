@@ -11,7 +11,7 @@ cache:
   - $HOME/.sonar/cache/
 before_script:
   - ./gradlew --version
-script: ./gradlew clean build 
+script: ./gradlew --scan clean build 
 jdk:
   - oraclejdk8
 env: TERM=dumb
