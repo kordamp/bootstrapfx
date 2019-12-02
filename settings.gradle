@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: MIT
  *
- * Copyright (c) 2015-2019 Andres Almiray
+ * Copyright (c) 2015-2019 Andres Almiray.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,32 +21,28 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 pluginManagement {
     repositories {
         jcenter()
-        maven { url 'https://plugins.gradle.org/m2/' }
+        gradlePluginPortal()
         maven { url 'https://sandec.bintray.com/repo' }
+        mavenLocal()
     }
 }
 
-enableFeaturePreview('STABLE_PUBLISHING')
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'org.kordamp.gradle:settings-gradle-plugin:0.29.0'
+    }
+}
+apply plugin: 'org.kordamp.gradle.settings'
 
 rootProject.name = 'bootstrapfx'
 
-def includeProject = { String projectDirName, String projectName ->
-    File baseDir = new File(settingsDir, projectDirName)
-    File projectDir = new File(baseDir, projectName)
-    String buildFileName = "${projectName}.gradle"
-
-    assert projectDir.isDirectory()
-    assert new File(projectDir, buildFileName).isFile()
-
-    include projectName
-    project(":${projectName}").projectDir    = projectDir
-    project(":${projectName}").buildFileName = buildFileName
+projects {
+    directories = ['subprojects']
 }
-
-includeProject 'subprojects', 'bootstrapfx-core'
-includeProject 'subprojects', 'sampler'
-includeProject 'subprojects', 'sampler-jpro'

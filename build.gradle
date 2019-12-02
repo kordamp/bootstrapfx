@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: MIT
  *
- * Copyright (c) 2015-2019 Andres Almiray
+ * Copyright (c) 2015-2019 Andres Almiray.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,16 +21,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 plugins {
-    id 'com.gradle.build-scan'                version '2.1'
-    id 'org.kordamp.gradle.kordamp-parentpom' version '1.2.1'
-    id 'org.kordamp.gradle.source-xref'       version '0.12.0' apply false
-}
-
-buildScan {
-    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
-    termsOfServiceAgree = 'yes'
+    id 'org.kordamp.gradle.kordamp-parentpom' version '1.8.0'
+    id 'org.kordamp.gradle.source-xref'       version '0.29.0' apply false
 }
 
 config {
@@ -42,7 +35,7 @@ config {
         specification { enabled = false }
     }
 
-    license {
+    licensing {
         licenses {
             license {
                 id      = 'MIT'
@@ -79,8 +72,6 @@ allprojects {
         mapping {
             fxml = 'XML_STYLE'
         }
-        exclude '**/*.png'
-        exclude '**/*.jpg'
         exclude '**/*.scss'
     }
 }
