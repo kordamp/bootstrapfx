@@ -22,8 +22,8 @@
  * THE SOFTWARE.
  */
 plugins {
-    id 'org.kordamp.gradle.kordamp-parentpom' version '1.8.0'
-    id 'org.kordamp.gradle.source-xref'       version '0.29.0' apply false
+    id 'org.kordamp.gradle.kordamp-parentpom' version '1.9.1'
+    id 'org.kordamp.gradle.source-xref'       version '0.30.3' apply false
 }
 
 config {
@@ -55,19 +55,6 @@ config {
 allprojects {
     apply plugin: 'idea'
 
-    dependencyUpdates.resolutionStrategy = {
-        componentSelection { rules ->
-            rules.all { selection ->
-                boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
-                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
-                }
-                if (rejected) {
-                    selection.reject('Release candidate')
-                }
-            }
-        }
-    }
-
     license {
         mapping {
             fxml = 'XML_STYLE'
@@ -78,9 +65,4 @@ allprojects {
 
 subprojects { subproj ->
     apply plugin: 'java'
-
-    subproj.tasks.withType(JavaCompile) {
-        sourceCompatibility = subproj.sourceCompatibility
-        targetCompatibility = subproj.targetCompatibility
-    }
 }

@@ -26,7 +26,6 @@ pluginManagement {
         jcenter()
         gradlePluginPortal()
         maven { url 'https://sandec.bintray.com/repo' }
-        mavenLocal()
     }
 }
 
@@ -36,7 +35,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'org.kordamp.gradle:settings-gradle-plugin:0.29.0'
+        classpath 'org.kordamp.gradle:settings-gradle-plugin:0.30.3'
     }
 }
 apply plugin: 'org.kordamp.gradle.settings'
