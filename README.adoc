@@ -1,7 +1,7 @@
 = BootstrapFX
 :linkattrs:
 :project-owner:   kordamp
-:project-repo:    kordamp
+:project-repo:    maven
 :project-name:    bootstrapfx-core
 :project-group:   org.kordamp.bootstrapfx
 :project-version: 0.2.4
