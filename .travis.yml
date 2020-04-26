@@ -1,10 +1,11 @@
 language: java
-jdk: openjdk8
+# to make the build work with oraclejdk8: https://travis-ci.community/t/solved-oraclejdk8-installation-failing-still-again/3428
+dist: trusty
+jdk: oraclejdk8
 services:
   - xvfb
 before_install:
   - sudo apt update
-  - sudo apt install openjfx
   - chmod +x ./gradlew
   - export DISPLAY=:99.0
 install: true
