@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: MIT
  *
- * Copyright (c) 2015-2019 Andres Almiray.
+ * Copyright (c) 2015-2020 Andres Almiray.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,12 +26,14 @@ pluginManagement {
         jcenter()
         gradlePluginPortal()
         maven { url 'https://sandec.bintray.com/repo' }
+        mavenLocal()
     }
 }
 
 buildscript {
     repositories {
         gradlePluginPortal()
+        jcenter()
         mavenLocal()
     }
     dependencies {
@@ -41,7 +43,3 @@ buildscript {
 apply plugin: 'org.kordamp.gradle.settings'
 
 rootProject.name = 'bootstrapfx'
-
-projects {
-    directories = ['subprojects']
-}

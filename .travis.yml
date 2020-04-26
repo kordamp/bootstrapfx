@@ -1,20 +1,21 @@
 language: java
+jdk: openjdk8
+services:
+  - xvfb
 before_install:
+  - sudo apt update
+  - sudo apt install openjfx
+  - chmod +x ./gradlew
   - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+install: true
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
+  - $HOME/.m2/
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
-  - $HOME/.sonar/cache/
 before_script:
   - ./gradlew --version
-script: ./gradlew clean build -S
-jdk:
-  - openjdk8
+script: ./gradlew build -S
 env: TERM=dumb
-# after_success:
-#   - ./gradlew coveralls
-#   - bash <(curl -s https://codecov.io/bash)
