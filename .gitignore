@@ -1,5 +1,4 @@
 .gradle
-.sass-cache
 *.iml
 *.ipr
 *.iws

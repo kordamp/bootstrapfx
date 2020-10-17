@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-    compile '{project-group}:bootstrapfx-core:{project-version}'
+    compile '{project-group}:{project-name}-core:{project-version}'
 }
 ----
 
@@ -44,7 +44,7 @@ dependencies {
 <dependencies>
     <dependency>
         <groupId>{project-group}</groupId>
-        <artifactId>bootstrapfx-core</artifactId>
+        <artifactId>{project-name}-core</artifactId>
         <version>{project-version}</version>
     </dependency>
 </dependencies>
@@ -92,14 +92,14 @@ public class Sampler extends Application {
 
 === Java 9+
 
-BootstrapFX can be used in a modular fashion when running in Java9+. It's module name is `org.kordamp.bootstrapfx.core`.
+BootstrapFX can be used in a modular fashion when running in Java9+. It's module name is `{project-group}.core`.
 
 == Building
 
 You must meet the following requirements:
 
  * JDK8u60 as a minimum
- * Gradle 5.2
+ * Gradle 6+
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
 
@@ -132,17 +132,17 @@ to use the gradle wrapper if available or your global gradle command. This is an
  . Make a full build by invoking the following command
 [source]
 ----
-$ ./gradlew build
+$ gm build
 ----
  . Run the sampler application by invoking the following command
 [source]
 ----
-$ ./gradlew :sampler:run
+$ gm :sampler:run
 ----
  . Run the sampler application with link:https://www.jpro.one/[JPro] by invoking the following command
 [source]
 ----
-$ ./gradlew :sampler-jpro:jproRun
+$ gm :sampler-jpro:jproRun
 ----
 
 == Supported CSS Classes

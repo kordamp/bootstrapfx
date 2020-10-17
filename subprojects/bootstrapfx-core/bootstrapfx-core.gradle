@@ -21,38 +21,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 plugins {
-    id 'com.github.johnrengelman.processes' version '0.5.0'
-    id 'com.github.robfletcher.compass'     version '2.0.6'
+    id 'java-library'
+    id 'io.freefair.jsass-java' version '5.2.1'
 }
 
-ext.sassSources = file('src/sass/resources')
-
-dependencies {
-    // upgraded dependencies for compass-gradle
-    jrubyExec 'org.bouncycastle:bcprov-jdk15on:1.60'
-    jrubyExec 'org.jruby:jruby-complete:9.2.0.0'
+processResources {
+    // jsass-java includes all *.scsss files in the final JAR
+    exclude('**/*.scss')
 }
-
-sourceSets {
-    sass {
-        resources.srcDir sassSources
-    }
-}
-
-compass {
-    sassDir = sassSources
-    cssDir = sourceSets.main.output.resourcesDir
-    noLineComments = true
-    debugInfo = false
-}
-
-classes.dependsOn compassCompile
 
 jar {
     manifest {
-        attributes(
-            'Automatic-Module-Name': 'org.kordamp.bootstrapfx.core'
-        )
+        attributes('Automatic-Module-Name': 'org.kordamp.bootstrapfx.core')
     }
 }

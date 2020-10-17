@@ -21,28 +21,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'https://plugins.gradle.org/m2/' }
-        maven { url 'https://sandec.bintray.com/repo' }
-    }
 
-    dependencies {
-        classpath "com.sandec.jpro:jpro-plugin-gradle:2018.1.9"
-    }
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'com.sandec.jpro'
 }
 
-apply plugin: 'application'
-apply plugin: 'com.sandec.jpro'
-
 config {
-    source     { enabled = false }
+    artifacts {
+        source     { enabled = false }
+    }
     publishing { enabled = false }
     bintray    { enabled = false }
 }
 
-mainClassName = 'org.kordamp.bootstrapfx.SamplerJPro'
+application {
+    mainClassName = 'org.kordamp.bootstrapfx.SamplerJPro'
+}
 
 dependencies {
     compile project(':sampler')

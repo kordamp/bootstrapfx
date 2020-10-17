@@ -21,17 +21,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 plugins {
+    id 'java-library'
     id 'application'
 }
 
 config {
-    source     { enabled = false }
+    artifacts {
+        source     { enabled = false }
+    }
     publishing { enabled = false }
     bintray    { enabled = false }
 }
 
-mainClassName = 'org.kordamp.bootstrapfx.Sampler'
+application {
+    mainClassName = 'org.kordamp.bootstrapfx.Sampler'
+}
 
 dependencies {
     api project(':bootstrapfx-core')
