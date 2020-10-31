@@ -24,11 +24,11 @@
 
 plugins {
     id 'java-library'
-    id 'io.freefair.jsass-java' version '5.2.1'
+    id 'io.freefair.jsass-java' version '5.3.0'
 }
 
 processResources {
-    // jsass-java includes all *.scsss files in the final JAR
+    // jsass-java includes all *.scss files in the final JAR
     exclude('**/*.scss')
 }
 

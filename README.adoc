@@ -4,7 +4,7 @@
 :project-repo:    maven
 :project-name:    bootstrapfx
 :project-group:   org.kordamp.bootstrapfx
-:project-version: 0.2.4
+:project-version: 0.3.0
 
 image:https://github.com/{project-owner}/{project-name}/workflows/Build/badge.svg["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}-core/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}-core/_latestVersion"]

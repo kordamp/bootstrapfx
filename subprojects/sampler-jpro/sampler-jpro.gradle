@@ -37,9 +37,9 @@ config {
 }
 
 application {
-    mainClassName = 'org.kordamp.bootstrapfx.SamplerJPro'
+    mainClass = 'org.kordamp.bootstrapfx.SamplerJPro'
 }
 
 dependencies {
-    compile project(':sampler')
+    api project(':sampler')
 }

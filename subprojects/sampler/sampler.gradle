@@ -36,11 +36,11 @@ config {
 }
 
 application {
-    mainClassName = 'org.kordamp.bootstrapfx.Sampler'
+    mainClass = 'org.kordamp.bootstrapfx.Sampler'
 }
 
 dependencies {
     api project(':bootstrapfx-core')
-    api 'org.fxmisc.richtext:richtextfx:0.10.3'
+    api 'org.fxmisc.richtext:richtextfx:0.10.5'
     api 'org.apache.commons:commons-io:1.3.2'
 }

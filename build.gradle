@@ -32,8 +32,8 @@ config {
     }
 
     licensing {
-        //mergeStrategy = 'overwrite'
         licenses {
+            inherits = false
             license {
                 id      = 'MIT'
                 primary = true

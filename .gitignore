@@ -8,3 +8,4 @@ out
 target
 .classpath
 .project
+.DS_Store
