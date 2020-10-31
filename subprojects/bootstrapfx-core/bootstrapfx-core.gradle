@@ -27,6 +27,12 @@ plugins {
     id 'io.freefair.jsass-java' version '5.3.0'
 }
 
+config {
+    bintray {
+        name = 'bootstrapfx-core'
+    }
+}
+
 processResources {
     // jsass-java includes all *.scss files in the final JAR
     exclude('**/*.scss')
