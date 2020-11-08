@@ -22,15 +22,27 @@
  * THE SOFTWARE.
  */
 
+pluginManagement {
+    repositories {
+        jcenter()
+        gradlePluginPortal()
+        mavenLocal()
+    }
+    plugins {
+        id 'org.javamodularity.moduleplugin' version modularityPluginVersion
+        id 'io.freefair.jsass-java'          version freefairPluginVersion
+        id 'com.google.osdetector'           version osPluginVersion
+        id 'org.jonnyzzz.java9c'             version java9cPluginVersion
+    }
+}
+
 buildscript {
     repositories {
         gradlePluginPortal()
         jcenter()
-        maven { url 'https://sandec.bintray.com/repo' }
         mavenLocal()
     }
     dependencies {
-        classpath "com.sandec.jpro:jpro-plugin-gradle:2018.1.9"
         classpath "org.kordamp.gradle:kordamp-parentbuild:$kordampBuildVersion"
     }
 }
@@ -42,28 +54,28 @@ enforce {
     rule(enforcer.rules.EnforceBytecodeVersion) { r ->
         r.enabled = false
     }
-    rule(enforcer.rules.ForceDependencies) { r ->
-        r.dependencies.addAll 'com.typesafe.play:twirl-api_2.12:1.3.15',
-            'commons-codec:commons-codec:1.10',
-            'org.apache.commons:commons-lang3:3.6',
-            'org.scala-lang:scala-library:2.12.6',
-            'org.scala-lang:scala-reflect:2.12.6',
-            'org.scala-lang.modules:scala-parser-combinators_2.12:1.1.1',
-            'com.fasterxml.jackson.core:jackson-core:2.8.11',
-            'com.fasterxml.jackson.core:jackson-annotations:2.8.11',
-            'com.fasterxml.jackson.core:jackson-databind:2.8.11.1',
-            'junit:junit:4.12',
-            'com.google.code.findbugs:jsr305:3.0.2',
-            'org.seleniumhq.selenium:selenium-api:3.5.3',
-            'org.seleniumhq.selenium:selenium-support:3.5.3',
-            'org.seleniumhq.selenium:selenium-remote-driver:3.5.3',
-            'com.google.guava:guava:23.0',
-            'com.typesafe.akka:akka-actor_2.12:2.5.17',
-            'com.typesafe.akka:akka-stream_2.12:2.5.17',
-            'com.typesafe:config:1.3.3',
-            'org.slf4j:slf4j-api:1.7.25',
-            'org.slf4j:jul-to-slf4j:1.7.25',
-            'org.bouncycastle:bcprov-jdk15on:1.60',
-            'org.jruby:jruby-complete:9.2.0.0'
-    }
+    // rule(enforcer.rules.ForceDependencies) { r ->
+    //     r.dependencies.addAll 'com.typesafe.play:twirl-api_2.12:1.3.15',
+    //         'commons-codec:commons-codec:1.10',
+    //         'org.apache.commons:commons-lang3:3.6',
+    //         'org.scala-lang:scala-library:2.12.6',
+    //         'org.scala-lang:scala-reflect:2.12.6',
+    //         'org.scala-lang.modules:scala-parser-combinators_2.12:1.1.1',
+    //         'com.fasterxml.jackson.core:jackson-core:2.8.11',
+    //         'com.fasterxml.jackson.core:jackson-annotations:2.8.11',
+    //         'com.fasterxml.jackson.core:jackson-databind:2.8.11.1',
+    //         'junit:junit:4.12',
+    //         'com.google.code.findbugs:jsr305:3.0.2',
+    //         'org.seleniumhq.selenium:selenium-api:3.5.3',
+    //         'org.seleniumhq.selenium:selenium-support:3.5.3',
+    //         'org.seleniumhq.selenium:selenium-remote-driver:3.5.3',
+    //         'com.google.guava:guava:23.0',
+    //         'com.typesafe.akka:akka-actor_2.12:2.5.17',
+    //         'com.typesafe.akka:akka-stream_2.12:2.5.17',
+    //         'com.typesafe:config:1.3.3',
+    //         'org.slf4j:slf4j-api:1.7.25',
+    //         'org.slf4j:jul-to-slf4j:1.7.25',
+    //         'org.bouncycastle:bcprov-jdk15on:1.60',
+    //         'org.jruby:jruby-complete:9.2.0.0'
+    // }
 }

@@ -24,7 +24,9 @@
 
 plugins {
     id 'java-library'
-    id 'io.freefair.jsass-java' version '5.3.0'
+    id 'org.jonnyzzz.java9c'
+    id 'org.javamodularity.moduleplugin'
+    id 'io.freefair.jsass-java'
 }
 
 config {
@@ -38,8 +40,8 @@ processResources {
     exclude('**/*.scss')
 }
 
-jar {
-    manifest {
-        attributes('Automatic-Module-Name': 'org.kordamp.bootstrapfx.core')
-    }
+dependencies {
+    compileOnly "org.openjfx:javafx-base:${javafxVersion}:${platform}"
+    compileOnly "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
+    compileOnly "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
 }

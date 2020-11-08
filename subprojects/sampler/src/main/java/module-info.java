@@ -22,32 +22,13 @@
  * THE SOFTWARE.
  */
 
-plugins {
-    id 'java-library'
-    id 'org.jonnyzzz.java9c'
-    id 'org.javamodularity.moduleplugin'
-    id 'application'
-}
-
-config {
-    artifacts {
-        source     { enabled = false }
-    }
-    publishing { enabled = false }
-    bintray    { enabled = false }
-}
-
-application {
-    mainClassName = 'org.kordamp.bootstrapfx.sampler/org.kordamp.bootstrapfx.sampler.Sampler'
-}
-
-dependencies {
-    api project(':bootstrapfx-core')
-    api 'org.fxmisc.richtext:richtextfx:0.10.5'
-    api 'commons-io:commons-io:2.8.0'
-
-    api "org.openjfx:javafx-base:${javafxVersion}:${platform}"
-    api "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
-    api "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
-    api "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
+module org.kordamp.bootstrapfx.sampler {
+    exports org.kordamp.bootstrapfx.sampler;
+    requires org.kordamp.bootstrapfx.core;
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires org.fxmisc.richtext;
+    requires org.apache.commons.io;
 }

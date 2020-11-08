@@ -21,37 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.kordamp.bootstrapfx;
-
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 
 /**
- * @author Florian Kirmaier
+ * @author Andres Almiray
  */
-public class SamplerJPro extends Application {
-    @Override
-    public void start(Stage primaryStage) throws Exception {
+module org.kordamp.bootstrapfx.core {
+    exports org.kordamp.bootstrapfx;
+    exports org.kordamp.bootstrapfx.scene.layout;
 
-        StackPane innerPane = new StackPane(new DemoTabPane());
-        innerPane.setMaxWidth(1000);
-        innerPane.setMaxHeight(600);
-        innerPane.setStyle("-fx-background-color: #ddd; -fx-background-radius: 10;");
-        StackPane outerPane = new StackPane(innerPane);
-        outerPane.setStyle("-fx-background-image: url('/org/kordamp/bootstrapfx/ambient-background.jpg');" +
-                "-fx-background-size: cover;");
-
-        Scene scene = new Scene(outerPane);
-        scene.getStylesheets().addAll(
-            "org/kordamp/bootstrapfx/bootstrapfx.css",
-            "org/kordamp/bootstrapfx/sampler.css",
-            "org/kordamp/bootstrapfx/xml-highlighting.css");
-
-        primaryStage.setTitle("BootstrapFX Sampler");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
+    requires transitive javafx.base;
+    requires transitive javafx.graphics;
+    requires javafx.controls;
 }

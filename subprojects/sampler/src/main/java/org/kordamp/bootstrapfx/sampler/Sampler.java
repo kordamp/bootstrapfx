@@ -21,25 +21,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+package org.kordamp.bootstrapfx.sampler;
 
-plugins {
-    id 'java-library'
-    id 'application'
-    id 'com.sandec.jpro'
-}
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-config {
-    artifacts {
-        source     { enabled = false }
+public class Sampler extends Application {
+    @Override
+    public void start(Stage stage) throws Exception {
+        Scene scene = new Scene(new DemoTabPane());
+
+        scene.getStylesheets().addAll(
+            "org/kordamp/bootstrapfx/bootstrapfx.css",
+            "org/kordamp/bootstrapfx/sampler/sampler.css",
+            "org/kordamp/bootstrapfx/sampler/xml-highlighting.css");
+
+        stage.setTitle("BootstrapFX Sampler");
+        stage.setScene(scene);
+        stage.setWidth(1024);
+        stage.show();
     }
-    publishing { enabled = false }
-    bintray    { enabled = false }
-}
-
-application {
-    mainClass = 'org.kordamp.bootstrapfx.SamplerJPro'
-}
-
-dependencies {
-    api project(':sampler')
 }

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.kordamp.bootstrapfx;
+package org.kordamp.bootstrapfx.sampler;
 
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Side;
@@ -34,7 +34,6 @@ import org.apache.commons.io.IOUtils;
 import java.net.URL;
 
 public class DemoTabPane extends StackPane {
-
     public DemoTabPane() throws Exception {
         URL location = getClass().getResource("sampler.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);

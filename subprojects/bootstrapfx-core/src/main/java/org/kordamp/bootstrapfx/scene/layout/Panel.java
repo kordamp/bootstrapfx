@@ -33,6 +33,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 
+/**
+ * @author Andres Almiray
+ */
 @DefaultProperty("body")
 public class Panel extends BorderPane {
     private ObjectProperty<Node> heading;

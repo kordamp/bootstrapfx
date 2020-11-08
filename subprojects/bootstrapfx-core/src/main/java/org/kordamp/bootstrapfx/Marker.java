@@ -23,26 +23,11 @@
  */
 package org.kordamp.bootstrapfx;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-public class Sampler extends Application {
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-
-        Scene scene = new Scene(new DemoTabPane());
-        scene.getStylesheets().addAll(
-                "org/kordamp/bootstrapfx/bootstrapfx.css",
-                "org/kordamp/bootstrapfx/sampler.css",
-                "org/kordamp/bootstrapfx/xml-highlighting.css");
-
-        primaryStage.setTitle("BootstrapFX Sampler");
-        primaryStage.setScene(scene);
-        //primaryStage.sizeToScene();
-        primaryStage.setWidth(1024);
-        primaryStage.show();
-
+/**
+ * @author Andres Almiray
+ */
+public final class Marker {
+    private Marker() {
+        // noop
     }
-
 }

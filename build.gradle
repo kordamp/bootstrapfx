@@ -22,6 +22,12 @@
  * THE SOFTWARE.
  */
 
+plugins {
+    id 'com.google.osdetector'
+}
+
+ext.platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
+
 config {
     info {
         description   = 'BootstrapFX: CSS and widgets'
@@ -43,9 +49,14 @@ config {
 
     docs {
         javadoc {
+            autoLinks {
+                enabled = false
+            }
             options {
                 addBooleanOption('javafx', true)
-                links('http://docs.oracle.com/javase/8/javafx/api/')
+            }
+            aggregate {
+                enabled = false
             }
         }
     }
@@ -53,11 +64,25 @@ config {
 
 allprojects {
     apply plugin: 'idea'
+}
 
-    license {
-        mapping {
-            fxml = 'XML_STYLE'
+idea {
+    project {
+        jdkName sourceCompatibility
+        languageLevel sourceCompatibility
+
+        ipr {
+            withXml { provider ->
+                def node = provider.asNode()
+                node.component.find { it.'@name' == 'VcsDirectoryMappings' }?.mapping[0].'@vcs' = 'Git'
+            }
         }
+    }
+}
+
+allprojects {
+    license {
+        exclude '**/*.fxml'
         exclude '**/*.scss'
     }
 }

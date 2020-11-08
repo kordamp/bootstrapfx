@@ -18,8 +18,6 @@ stylesheet that closely resembles the original while being custom tailored for J
 It's worth mentioning that Twitter Bootstrap delivers more than just a standardized look for common widgets. It also
 provides new widgets, behavior and a grid system. Some of these features may be ported at a later stage to BootstrapFX.
 
-There is an link:https://demos.jpro.one/bootstrapfx.html[online-version] available at link:https://www.jpro.one/[jpro.one].
-
 == Installing
 
 You can get the latest version of **BootstrapFX** directly from link:https://bintray.com[Bintray's JCenter] repository or Maven Central.
@@ -33,7 +31,7 @@ repositories {
 }
 
 dependencies {
-    compile '{project-group}:{project-name}-core:{project-version}'
+    implementation '{project-group}:{project-name}-core:{project-version}'
 }
 ----
 
@@ -51,7 +49,7 @@ dependencies {
 ----
 
 Once the `bootstrapfx-core` dependency is in your classpath you just need to apply the `boostrapfx.css` stylesheet to
-an scene, for example
+a scene, for example
 
 [source,java]
 ----
@@ -90,16 +88,12 @@ public class Sampler extends Application {
 <2> Apply CSS class to widgets
 <3> Apply BootstrapFX stylesheet to scene
 
-=== Java 9+
-
-BootstrapFX can be used in a modular fashion when running in Java9+. It's module name is `{project-group}.core`.
-
 == Building
 
 You must meet the following requirements:
 
- * JDK8u60 as a minimum
- * Gradle 6+
+ * JDK11 as a minimum
+ * Gradle 6.3
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
 
@@ -117,7 +111,7 @@ You may used the included gradle wrapper script if you don't have `gradle` insta
 
  . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once SDKMAN is installed invoke `sdk install gradle 5.2`.
+ . Once SDKMAN is installed invoke `sdk install gradle 6.3`.
  . Test your setup by invoking `gradle --version`.
 
 .Gum
@@ -129,20 +123,16 @@ to use the gradle wrapper if available or your global gradle command. This is an
 
 === Next Steps
 
- . Make a full build by invoking the following command
+Make a full build by invoking the following command
 [source]
 ----
 $ gm build
 ----
- . Run the sampler application by invoking the following command
+
+Run the sampler application by invoking the following command
 [source]
 ----
 $ gm :sampler:run
-----
- . Run the sampler application with link:https://www.jpro.one/[JPro] by invoking the following command
-[source]
-----
-$ gm :sampler-jpro:jproRun
 ----
 
 == Supported CSS Classes
@@ -231,6 +221,10 @@ image::images/panels.png[]
 image::images/splitmenu-buttons.png[]
 
 == Changelog
+
+.0.3.0
+
+ * The build was updated to use a different SASS plugin.
 
 .0.2.4
 
