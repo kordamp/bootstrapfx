@@ -29,25 +29,23 @@ plugins {
     id 'application'
 }
 
+mainClassName = 'org.kordamp.bootstrapfx.sampler/org.kordamp.bootstrapfx.sampler.Sampler'
+
+dependencies {
+    implementation project(':bootstrapfx-core')
+    implementation 'org.fxmisc.richtext:richtextfx:0.10.5'
+    implementation 'commons-io:commons-io:2.8.0'
+
+    implementation "org.openjfx:javafx-base:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
+}
+
 config {
     artifacts {
         source     { enabled = false }
     }
     publishing { enabled = false }
     bintray    { enabled = false }
-}
-
-application {
-    mainClassName = 'org.kordamp.bootstrapfx.sampler/org.kordamp.bootstrapfx.sampler.Sampler'
-}
-
-dependencies {
-    api project(':bootstrapfx-core')
-    api 'org.fxmisc.richtext:richtextfx:0.10.5'
-    api 'commons-io:commons-io:2.8.0'
-
-    api "org.openjfx:javafx-base:${javafxVersion}:${platform}"
-    api "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
-    api "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
-    api "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
 }

@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-module org.kordamp.bootstrapfx.sampler {
+open module org.kordamp.bootstrapfx.sampler {
     exports org.kordamp.bootstrapfx.sampler;
     requires org.kordamp.bootstrapfx.core;
     requires javafx.base;
