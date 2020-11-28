@@ -26,8 +26,12 @@ package org.kordamp.bootstrapfx;
 /**
  * @author Andres Almiray
  */
-public final class Marker {
-    private Marker() {
+public final class BootstrapFX {
+    private BootstrapFX() {
         // noop
+    }
+
+    public static String bootstrapFXStylesheet() {
+        return BootstrapFX.class.getResource("bootstrapfx.css").toExternalForm();
     }
 }

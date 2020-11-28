@@ -4,7 +4,7 @@
 :project-repo:    maven
 :project-name:    bootstrapfx
 :project-group:   org.kordamp.bootstrapfx
-:project-version: 0.3.0
+:project-version: 0.4.0
 
 image:https://github.com/{project-owner}/{project-name}/workflows/Build/badge.svg["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}-core/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}-core/_latestVersion"]
@@ -60,6 +60,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.kordamp.bootstrapfx.BootstrapFX;
 import org.kordamp.bootstrapfx.scene.layout.Panel;
 
 public class Sampler extends Application {
@@ -75,7 +76,7 @@ public class Sampler extends Application {
         panel.setBody(content);
 
         Scene scene = new Scene(panel);
-        scene.getStylesheets().add("org/kordamp/bootstrapfx/bootstrapfx.css"); //<3>
+        scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());       //<3>
 
         primaryStage.setTitle("BootstrapFX");
         primaryStage.setScene(scene);
@@ -221,6 +222,11 @@ image::images/panels.png[]
 image::images/splitmenu-buttons.png[]
 
 == Changelog
+
+.0.4.0
+
+ * Full modular build.
+ * JDK 11 is now the minimum requirement.
 
 .0.3.0
 

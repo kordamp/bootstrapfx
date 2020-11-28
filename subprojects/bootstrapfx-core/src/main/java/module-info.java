@@ -25,7 +25,7 @@
 /**
  * @author Andres Almiray
  */
-open module org.kordamp.bootstrapfx.core {
+module org.kordamp.bootstrapfx.core {
     exports org.kordamp.bootstrapfx;
     exports org.kordamp.bootstrapfx.scene.layout;
 

@@ -26,6 +26,7 @@ package org.kordamp.bootstrapfx.sampler;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.kordamp.bootstrapfx.BootstrapFX;
 
 public class Sampler extends Application {
     @Override
@@ -33,7 +34,7 @@ public class Sampler extends Application {
         Scene scene = new Scene(new DemoTabPane());
 
         scene.getStylesheets().addAll(
-            "org/kordamp/bootstrapfx/bootstrapfx.css",
+            BootstrapFX.bootstrapFXStylesheet(),
             "org/kordamp/bootstrapfx/sampler/sampler.css",
             "org/kordamp/bootstrapfx/sampler/xml-highlighting.css");
 
