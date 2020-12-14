@@ -43,9 +43,11 @@ dependencies {
 }
 
 config {
+    /*
     artifacts {
         source     { enabled = false }
     }
     publishing { enabled = false }
     bintray    { enabled = false }
+    */
 }

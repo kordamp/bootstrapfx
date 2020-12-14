@@ -1,0 +1,93 @@
+{
+  "samples": [
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Alerts",
+      "desc": "Alerts with BootstrapFX",
+      "preview": "preview/Alerts.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/alerts.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX ButtonGroups",
+      "desc": "ButtonGroups with BootstrapFX",
+      "preview": "preview/ButtonGroups.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/button_groups.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Buttons",
+      "desc": "Buttons with BootstrapFX",
+      "preview": "preview/Buttons.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/buttons.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Labels",
+      "desc": "Labels with BootstrapFX",
+      "preview": "preview/Labels.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/labels.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Panels",
+      "desc": "Panels with BootstrapFX",
+      "preview": "preview/Panels.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/panels.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Paragraph",
+      "desc": "Paragraphs with BootstrapFX",
+      "preview": "preview/Paragraph.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/paragraph.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Progressbar",
+      "desc": "Progresbars with BootstrapFX",
+      "preview": "preview/ProgressBar.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/progressbars.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX SplitMenuButtons",
+      "desc": "SplitMenuButtons with BootstrapFX",
+      "preview": "preview/SplitMenuButtons.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/split_menu_buttons.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Text",
+      "desc": "Simple text with BootstrapFX",
+      "preview": "preview/Text.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/text.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Text2",
+      "desc": "Colored text with BootstrapFX",
+      "preview": "preview/Text2.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/text2.fxml"
+    },
+    {
+      "project": "BootstrapFX",
+      "name": "BootstrapFX Tooltips",
+      "desc": "Tooltips with BootstrapFX",
+      "preview": "preview/Tooltips.png",
+      "css": ["org/kordamp/bootstrapfx/bootstrapfx.css", "org/kordamp/bootstrapfx/sampler/sampler.css","org/kordamp/bootstrapfx/sampler/xml-highlighting.css"],
+      "fxml": "org/kordamp/bootstrapfx/sampler/tooltips.fxml"
+    }
+
+  ]
+}
