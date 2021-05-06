@@ -7,7 +7,7 @@ on:
 jobs:
   earlyaccess:
     name: EarlyAccess
-    if: github.repository == 'kordamp/jandex-gradle-plugin' && startsWith(github.event.head_commit.message, 'Releasing version') != true
+    if: github.repository == 'kordamp/bootstrapfx' && startsWith(github.event.head_commit.message, 'Releasing version') != true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
