@@ -26,6 +26,12 @@ plugins {
     id 'com.google.osdetector'
 }
 
+project.rootProject.ext.theVersion = file('VERSION').text.trim()
+
+allprojects { p ->
+    p.version = p.rootProject.ext.theVersion
+}
+
 ext.platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
 
 config {
