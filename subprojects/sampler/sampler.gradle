@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: MIT
  *
- * Copyright (c) 2015-2020 Andres Almiray.
+ * Copyright (c) 2015-2021 Andres Almiray.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ mainClassName = 'org.kordamp.bootstrapfx.sampler/org.kordamp.bootstrapfx.sampler
 
 dependencies {
     implementation project(':bootstrapfx-core')
-    implementation 'org.fxmisc.richtext:richtextfx:0.10.5'
+    implementation 'org.fxmisc.richtext:richtextfx:0.10.6'
     implementation 'commons-io:commons-io:2.8.0'
 
     implementation "org.openjfx:javafx-base:${javafxVersion}:${platform}"
@@ -47,5 +47,4 @@ config {
         source     { enabled = false }
     }
     publishing { enabled = false }
-    bintray    { enabled = false }
 }
