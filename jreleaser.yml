@@ -1,0 +1,75 @@
+#
+# SPDX-License-Identifier: MIT
+#
+# Copyright (c) 2015-2021 Andres Almiray.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+#
+
+project:
+  name: bootstrapfx
+  description: 'BootstrapFX: CSS and widgets'
+  longDescription: |
+    BootstrapFX is a partial port of [Twitter Bootstrap](http://getbootstrap.com) for JavaFX. It mainly provides a CSS
+    stylesheet that closely resembles the original while being custom tailored for JavaFX's unique CSS flavor.
+
+    It's worth mentioning that Twitter Bootstrap delivers more than just a standardized look for common widgets. It also
+    provides new widgets, behavior and a grid system. Some of these features may be ported at a later stage to BootstrapFX.
+
+  website: https://github.com/kordamp/bootstrapfx
+  authors:
+    - Andres Almiray
+  license: MIT
+
+release:
+  github:
+    username: aalmiray
+    overwrite: true
+    changelog:
+      formatted: ALWAYS
+      change: '- {{commitShortHash}} {{commitTitle}}'
+      labelers:
+        - label: 'feature'
+          title: 'Resolves #'
+          body: 'Resolves #'
+        - label: 'issue'
+          title: 'Fixes #'
+          body: 'Fixes #'
+        - label: 'issue'
+          title: 'Relates to #'
+          body: 'Relates to #'
+        - label: 'task'
+          title: '[chore]'
+      categories:
+        - title: '🚀 Features'
+          labels:
+            - 'feature'
+        - title: '✅ Issues'
+          labels:
+            - 'issue'
+        - title: '🧰 Tasks'
+          labels:
+            - 'task'
+      replacers:
+        - search: '\[chore\] '
+          replace: ''
+
+announce:
+  twitter:
+    active: release
